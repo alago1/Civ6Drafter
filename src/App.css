@@ -25,21 +25,32 @@
 }
 
 .hex {
+  position: relative;
   --hexagon-unit-width: 130px;
   --hexagon-unit-margin: 2px;
   width: var(--hexagon-unit-width);
-  margin: 0px var(--hexagon-unit-margin);
+  height: auto;
+  margin: -7px var(--hexagon-unit-margin);
   transition: transform 0.5s ease;
 }
 
 .hex:hover {
   cursor: pointer;
   transform: scale(1.08);
+  z-index: 1;
 }
 
 .hex image {
   x: calc(50% * (1 - 1.17));
   y: calc(50% * (1.03 - 1));
+}
+
+.hex-flag {
+  position: absolute;
+  height: 40px;
+  left: 50%;
+  top: 85%;
+  transform: translate(-50%, -50%);
 }
 
 .row {

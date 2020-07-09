@@ -22,13 +22,15 @@ function App() {
 
     let civInfo = parseCivInfo(civs[elem]);
     return (
-      <Hexagon
-        key={Object.keys(civs)[index + 1]}
-        className="hex"
-        backgroundImage={civInfo.portrait}
-        backgroundScale={1.03}
-        onClick={() => console.log(civInfo)}
-      />
+      <div className="hex">
+        <img src={civInfo.flag} alt="" className="hex-flag" />
+        <Hexagon
+          key={Object.keys(civs)[index + 1]}
+          backgroundImage={civInfo.portrait}
+          backgroundScale={1.03}
+          onClick={() => console.log(civInfo)}
+        />
+      </div>
     );
   });
 
@@ -36,7 +38,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         {[...Array(n_rows).keys()].map((row_index) => (
-          <div className="row">
+          <div className="row" key={row_index}>
             {[...Array(cells_per_row).keys()].map(
               (col_index) => hexGrid[cells_per_row * row_index + col_index]
             )}
