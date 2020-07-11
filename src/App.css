@@ -1,19 +1,9 @@
 .App {
   text-align: center;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+.hex-grid {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -37,7 +27,6 @@
 .hex:hover {
   cursor: pointer;
   transform: scale(1.08);
-  z-index: 1;
 }
 
 .hex image {
@@ -68,15 +57,62 @@
   transform: scale(1.08);
 }
 
-.App-link {
-  color: #61dafb;
+.ReactModal__Overlay {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.modal-close-button {
+  float: right;
+  color: red;
+  border: none;
+  background-color: transparent;
+  margin-top: -10px;
+  font-size: 30px;
+}
+
+.modal-content {
+  display: flex;
+  align-items: flex-start;
+}
+
+.modal-portrait {
+  position: relative;
+  height: auto;
+  display: inline-block;
+}
+
+.modal-selected-portrait {
+  width: 150px;
+}
+
+.modal-selected-flag {
+  position: absolute;
+  width: 50px;
+  transform: translate(-100px, 130px);
+}
+
+.modal-description {
+  margin-left: 20px;
+}
+
+.modal-description * {
+  color: whitesmoke;
+}
+
+.modal-title {
+  display: inline-block;
+  margin: 0px;
+  color: whitesmoke;
+  font-size: 3rem;
 }
