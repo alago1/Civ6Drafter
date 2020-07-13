@@ -3,151 +3,222 @@
     "name": "Unknown",
     "nation": "Unknown",
     "portrait": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/0/01/Icon_leader_default.png?version=60586eb18418dd15b884826d2ca54529",
-    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/0/08/Icon_civilization_unknown.png?version=6da503d1390c5bf8d50ccc63bff72102"
+    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/0/08/Icon_civilization_unknown.png?version=6da503d1390c5bf8d50ccc63bff72102",
+    "wiki": "https://civilization.fandom.com/wiki/Leaders_(Civ6)",
+    "leader-description": {},
+    "civ-description": {},
+    "dlc-modifiers": {}
   },
 
   "america1": {
     "name": "Teddy Roosevelt",
     "nation": "America",
     "portrait": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/c/cf/Icon_leader_t_roosevelt.png?version=ca9fda69a2a90aa08e862eae3d81d97e",
-    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/7/74/Icon_civilization_america.png?version=b912e6a6817a21c6d1e96263272b2b2e"
+    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/7/74/Icon_civilization_america.png?version=b912e6a6817a21c6d1e96263272b2b2e",
+    "wiki": "https://civilization.fandom.com/wiki/Teddy_Roosevelt_(Civ6)",
+    "leader-description": {
+      "Bonus - Roosevelt Corollary": "+5 Combat Strength for all units inside America's home continent. +1 Appeal to all tiles in a city with a National Park. Gain the Rough Rider unique unit with Rifling.",
+      "AI Agenda - Big Stick Policy": "Likes peaceful civilizations that have a city on his home continent. Dislikes civilizations starting wars on his continent.",
+      "Religion": "Protestanism"
+    },
+    "civ-description": {
+      "Civ Ability - Founding Fathers": "Government legacy bonuses accumulate in half the usual number of turns.",
+      "Unique Unit": "P-51 Mustang",
+      "Unique Infrastructure": "Film Studio"
+    },
+    "dlc-modifiers": {
+      "R&F Civ Ability": "All Diplomatic policy slots in the current government are converted to Wildcard slots.",
+      "GS Civ Ability": "All Diplomatic policy slots in the current government are converted to Wildcard slots. +1 Diplomatic Favor per turn for each Wildcard slot in the current government."
+    }
   },
   "arabia1": {
     "name": "Saladin",
     "nation": "Arabia",
     "portrait": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/8/85/Icon_leader_saladin.png?version=377c538984c3a2a412329b0a78572d92",
-    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/a/a0/Icon_civilization_arabia.png?version=738f73f3d1efeb13d1f73825a5dc45bb"
-  },
-  "australia1": {
-    "name": "John Curtin",
-    "nation": "Australia",
-    "portrait": "",
-    "flag": ""
+    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/a/a0/Icon_civilization_arabia.png?version=738f73f3d1efeb13d1f73825a5dc45bb",
+    "wiki": "https://civilization.fandom.com/wiki/Saladin_(Civ6)",
+    "leader-description": {},
+    "civ-description": {},
+    "dlc-modifiers": {}
   },
   "aztec1": {
     "name": "Montezuma",
     "nation": "Aztec",
     "portrait": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/1/14/Icon_leader_montezuma.png?version=fc8149d0cff35ad10c72429171446c9d",
-    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/8/8a/Icon_civilization_aztec.png?version=084289260ed86570adeb43a063b3036e"
+    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/8/8a/Icon_civilization_aztec.png?version=084289260ed86570adeb43a063b3036e",
+    "wiki": "https://civilization.fandom.com/wiki/Montezuma_(Civ6)",
+    "leader-description": {},
+    "civ-description": {},
+    "dlc-modifiers": {}
   },
   "brazil1": {
     "name": "Pedro II",
     "nation": "Brazil",
     "portrait": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/4/44/Icon_leader_pedro.png?version=519bc2d4861aa47699e2194fe0d0e67a",
-    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/e/eb/Icon_civilization_brazil.png?version=c4b9328c0c877e3831c37ad2d82d6131"
+    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/e/eb/Icon_civilization_brazil.png?version=c4b9328c0c877e3831c37ad2d82d6131",
+    "wiki": "https://civilization.fandom.com/wiki/Pedro_II_(Civ6)",
+    "leader-description": {},
+    "civ-description": {},
+    "dlc-modifiers": {}
   },
   "china1": {
     "name": "Qin Shi Huang",
     "nation": "China",
     "portrait": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/b/b9/Icon_leader_qin.png?version=90fc44b19913b26da2328614a35ee104",
-    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/d/db/Icon_civilization_china.png?version=bba31a343de70f28279f3a00e642cb20"
+    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/d/db/Icon_civilization_china.png?version=bba31a343de70f28279f3a00e642cb20",
+    "wiki": "https://civilization.fandom.com/wiki/Qin_Shi_Huang_(Civ6)",
+    "leader-description": {},
+    "civ-description": {},
+    "dlc-modifiers": {}
   },
   "egypt1": {
     "name": "Cleopatra",
     "nation": "Egypt",
     "portrait": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/8/87/Icon_leader_cleopatra.png?version=0b25664f5c318b6617524c100939e45a",
-    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/8/82/Icon_civilization_egypt.png?version=69c0a7433cd6d1b1e81f3d17aa748e75"
+    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/8/82/Icon_civilization_egypt.png?version=69c0a7433cd6d1b1e81f3d17aa748e75",
+    "wiki": "https://civilization.fandom.com/wiki/Cleopatra_(Civ6)",
+    "leader-description": {},
+    "civ-description": {},
+    "dlc-modifiers": {}
   },
   "england1": {
     "name": "Victoria",
     "nation": "England",
     "portrait": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/f/f0/Icon_leader_victoria.png?version=0bb1040e6b024dc0aa3a6d6e02b82049",
-    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/6/6e/Icon_civilization_england.png?version=0dc226ce4502d42bd7ee2827842ef6cc"
+    "wiki": "https://civilization.fandom.com/wiki/Victoria_(Civ6)",
+    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/6/6e/Icon_civilization_england.png?version=0dc226ce4502d42bd7ee2827842ef6cc",
+    "leader-description": {},
+    "civ-description": {},
+    "dlc-modifiers": {}
   },
   "france1": {
     "name": "Catherine de'Medici",
     "nation": "France",
     "portrait": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/a/a5/Icon_leader_catherine_de_medici.png?version=ed623dbc4122b78cc0e5f4f38ce76d00",
-    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/d/d8/Icon_civilization_france.png?version=b115e90d972f99f73883f4a60f0a494c"
+    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/d/d8/Icon_civilization_france.png?version=b115e90d972f99f73883f4a60f0a494c",
+    "wiki": "https://civilization.fandom.com/wiki/Catherine_de_Medici_(Civ6)",
+    "leader-description": {},
+    "civ-description": {},
+    "dlc-modifiers": {}
   },
   "germany1": {
     "name": "Frederick Barbosa",
     "nation": "Germany",
     "portrait": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/d/dd/Icon_leader_barbarossa.png?version=bbbc4b3bbcff0176310a7505c88bd392",
-    "flag": ""
+    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/6/68/Icon_civilization_germany.png?version=5bdbc7038665214a9847f601e3fe71aa",
+    "wiki": "https://civilization.fandom.com/wiki/Frederick_Barbarossa_(Civ6)",
+    "leader-description": {},
+    "civ-description": {},
+    "dlc-modifiers": {}
   },
   "greece1": {
     "name": "Gorgo",
     "nation": "Greece",
     "portrait": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/5/5a/Icon_leader_gorgo.png?version=4b61e0299440892aed188fc0c6cfab37",
-    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/a/a3/Icon_civilization_greece_gorgo.png?version=509c3ebe52b7f0c5fee2334c9bd82ddd"
+    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/a/a3/Icon_civilization_greece_gorgo.png?version=509c3ebe52b7f0c5fee2334c9bd82ddd",
+    "wiki": "https://civilization.fandom.com/wiki/Gorgo_(Civ6)",
+    "leader-description": {},
+    "civ-description": {},
+    "dlc-modifiers": {}
   },
   "greece2": {
     "name": "Pericles",
     "nation": "Greece",
     "portrait": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/9/90/Icon_leader_pericles.png?version=3aea5d970cc08858311cb88c4806d030",
-    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/9/97/Icon_civilization_greece.png?version=c24fdf458ec7090220d78b0b58508fd1"
+    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/9/97/Icon_civilization_greece.png?version=c24fdf458ec7090220d78b0b58508fd1",
+    "wiki": "https://civilization.fandom.com/wiki/Pericles_(Civ6)",
+    "leader-description": {},
+    "civ-description": {},
+    "dlc-modifiers": {}
   },
   "india1": {
     "name": "Gandhi",
     "nation": "India",
     "portrait": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/1/18/Icon_leader_gandhi.png?version=6d718852e5ae633f4804b847075396c1",
-    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/2/20/Icon_civilization_india.png?version=1d92aa329dd122aa775eb22f73f5ab8d"
+    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/2/20/Icon_civilization_india.png?version=1d92aa329dd122aa775eb22f73f5ab8d",
+    "wiki": "https://civilization.fandom.com/wiki/Gandhi_(Civ6)",
+    "leader-description": {},
+    "civ-description": {},
+    "dlc-modifiers": {}
   },
   "japan1": {
     "name": "Hojo Tokimune",
     "nation": "Japan",
     "portrait": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/d/d4/Icon_leader_hojo.png?version=fa308b54957e9ee6a8ac8187943bd41c",
-    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/f/fe/Icon_civilization_japan.png?version=795e1937632cb021c8ddfc07571c7822"
+    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/f/fe/Icon_civilization_japan.png?version=795e1937632cb021c8ddfc07571c7822",
+    "wiki": "https://civilization.fandom.com/wiki/Hojo_Tokimune_(Civ6)",
+    "leader-description": {},
+    "civ-description": {},
+    "dlc-modifiers": {}
   },
   "kongo1": {
     "name": "Mvemba a Nzinga",
     "nation": "Kongo",
     "portrait": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/1/19/Icon_leader_mvemba.png?version=3dc6fc94142bf4a99a32dd71d6126d3d",
-    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/f/f2/Icon_civilization_kongo.png?version=30c06a7c00f0987749d20f1e636bd868"
-  },
-  "macedon1": {
-    "name": "Alexander the Great",
-    "nation": "Macedon",
-    "portrait": "",
-    "flag": ""
+    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/f/f2/Icon_civilization_kongo.png?version=30c06a7c00f0987749d20f1e636bd868",
+    "wiki": "https://civilization.fandom.com/wiki/Mvemba_a_Nzinga_(Civ6)",
+    "leader-description": {},
+    "civ-description": {},
+    "dlc-modifiers": {}
   },
   "norway1": {
     "name": "Harald Hardrada",
     "nation": "Norway",
     "portrait": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/9/97/Icon_leader_hardrada.png?version=f6d8497ed38aeb1b005c3ad5a15da241",
-    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/0/0d/Icon_civilization_norway.png?version=aedad9a828c9dcf16a27df834a01e2be"
-  },
-  "poland1": {
-    "name": "Jadwiga",
-    "nation": "Poland",
-    "portrait": "",
-    "flag": ""
-  },
-  "persia1": {
-    "name": "Cyrus II",
-    "nation": "Persia",
-    "portrait": "",
-    "flag": ""
+    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/0/0d/Icon_civilization_norway.png?version=aedad9a828c9dcf16a27df834a01e2be",
+    "wiki": "https://civilization.fandom.com/wiki/Harald_Hardrada_(Civ6)",
+    "leader-description": {},
+    "civ-description": {},
+    "dlc-modifiers": {}
   },
   "rome1": {
     "name": "Trajan",
     "nation": "Rome",
     "portrait": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/6/6c/Icon_leader_trajan.png?version=297a43aba545b5c1bbeecf3cc4dd19c1",
-    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/e/e8/Icon_civilization_rome.png?version=4fe114c062a7a2f25ea62673fd02f0f3"
+    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/e/e8/Icon_civilization_rome.png?version=4fe114c062a7a2f25ea62673fd02f0f3",
+    "wiki": "https://civilization.fandom.com/wiki/Trajan_(Civ6)",
+    "leader-description": {},
+    "civ-description": {},
+    "dlc-modifiers": {}
   },
   "russia1": {
     "name": "Peter",
     "nation": "Russia",
     "portrait": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/a/ae/Icon_leader_peter_great.png?version=b90418763e5952ebaf078dd7fbb7fe34",
-    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/4/4b/Icon_civilization_russia.png?version=9f4e09405ed8c5db0a9854a52086bb16"
+    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/4/4b/Icon_civilization_russia.png?version=9f4e09405ed8c5db0a9854a52086bb16",
+    "wiki": "https://civilization.fandom.com/wiki/Peter_(Civ6)",
+    "leader-description": {},
+    "civ-description": {},
+    "dlc-modifiers": {}
   },
   "scythia1": {
     "name": "Tomyris",
     "nation": "Scythia",
     "portrait": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/f/ff/Icon_leader_tomyris.png?version=8475f92100f232aed3f5a7be6388d53a",
-    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/a/a2/Icon_civilization_scythia.png?version=4d778fe1190ec50273653d19e236ea69"
+    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/a/a2/Icon_civilization_scythia.png?version=4d778fe1190ec50273653d19e236ea69",
+    "wiki": "https://civilization.fandom.com/wiki/Tomyris_(Civ6)",
+    "leader-description": {},
+    "civ-description": {},
+    "dlc-modifiers": {}
   },
   "spain1": {
     "name": "Philip II",
     "nation": "Spain",
     "portrait": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/8/80/Icon_leader_philip_ii.png?version=7631acb7d0125eb63d97ea2d417d1794",
-    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/a/ab/Icon_civilization_spain.png?version=665c8508fd3d4e08aba6c2e1e87b6e32"
+    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/a/ab/Icon_civilization_spain.png?version=665c8508fd3d4e08aba6c2e1e87b6e32",
+    "wiki": "https://civilization.fandom.com/wiki/Philip_II_(Civ6)",
+    "leader-description": {},
+    "civ-description": {},
+    "dlc-modifiers": {}
   },
   "sumeria1": {
     "name": "Gilgamesh",
     "nation": "Sumeria",
     "portrait": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/e/e3/Icon_leader_gilgamesh.png?version=a1eb41e0bdacc2a099fd430991b5f8a9",
-    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/0/07/Icon_civilization_sumeria.png?version=c444f6d98e3edc305726567c52afae46"
+    "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/0/07/Icon_civilization_sumeria.png?version=c444f6d98e3edc305726567c52afae46",
+    "wiki": "https://civilization.fandom.com/wiki/Gilgamesh_(Civ6)",
+    "leader-description": {},
+    "civ-description": {},
+    "dlc-modifiers": {}
   }
 }

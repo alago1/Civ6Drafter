@@ -89,7 +89,9 @@
 .modal-portrait {
   position: relative;
   height: auto;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .modal-selected-portrait {
@@ -99,7 +101,7 @@
 .modal-selected-flag {
   position: absolute;
   width: 50px;
-  transform: translate(-100px, 130px);
+  transform: translate(0px, 130px);
 }
 
 .modal-description {
@@ -115,4 +117,37 @@
   margin: 0px;
   color: whitesmoke;
   font-size: 3rem;
+}
+
+.modal-wiki-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.modal-link-img {
+  margin: 5px;
+}
+
+.modal-button {
+  margin: 10px;
+  width: 100%;
+  height: 50px;
+  border-radius: 30px;
+  border: 0px;
+  font-size: larger;
+  text-transform: uppercase;
+}
+
+.modal-button:hover {
+  cursor: pointer;
+}
+
+.ban-button {
+  background-color: red;
+}
+
+.select-button {
+  background-color: green;
 }

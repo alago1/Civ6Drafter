@@ -29,6 +29,60 @@ function App() {
     return civInfo;
   };
 
+  const getSelectedCivDescription = () => {
+    const isEmptyObject = (obj) => {
+      return (
+        typeof obj === "object" &&
+        Object.keys(obj).length === 0 &&
+        obj.constructor === Object
+      );
+    };
+
+    let fullDescription = [];
+
+    const genDescriptionByKey = (key) => {
+      const key_desc = [];
+      if (isEmptyObject(selectedInfo)) return [];
+
+      if (!isEmptyObject(selectedInfo[key])) {
+        Object.keys(selectedInfo[key]).forEach((param, index) => {
+          key_desc.push(
+            <li
+              key={`${selectedInfo.nation}-${selectedInfo.leader}-${key}-${index}`}
+            >
+              <strong>{param}: </strong>
+              {selectedInfo[key][param]}
+            </li>
+          );
+        });
+      }
+      return key_desc;
+    };
+
+    fullDescription.push(
+      <div>
+        <h3>Leader Features and Abilities</h3>
+        <ul>{genDescriptionByKey("leader-description")}</ul>
+      </div>,
+      <div>
+        <h3>Civilization Features and Abilities</h3>
+        <ul>{genDescriptionByKey("civ-description")}</ul>
+      </div>
+    );
+
+    const dlc_modifiers = genDescriptionByKey("dlc-modifiers");
+    if (dlc_modifiers.length !== 0) {
+      fullDescription.push(
+        <div>
+          <h3>DLC Modifiers</h3>
+          <ul>{dlc_modifiers}</ul>
+        </div>
+      );
+    }
+
+    return fullDescription;
+  };
+
   const hexGrid = Object.keys(civs).map((elem, index) => {
     if (elem === "default") return <></>;
 
@@ -97,10 +151,33 @@ function App() {
               alt=""
               className="modal-selected-flag"
             />
+            <br />
+            <br />
+            <a
+              href={selectedInfo.wiki}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="modal-wiki-link"
+            >
+              <img
+                src="https://img.icons8.com/metro/26/000000/external-link.png"
+                alt=""
+                className="modal-link-img"
+              />
+              Wiki Page
+            </a>
+            <button className="modal-button ban-button" onClick={closeModal}>
+              Ban
+            </button>
+            <button className="modal-button select-button" onClick={closeModal}>
+              Select
+            </button>
           </div>
           <div className="modal-description">
             <h1 className="modal-title">{`${selectedInfo.name} of ${selectedInfo.nation}`}</h1>
-            <p>This nation is ass. get another one if you trying to win.</p>
+            <div className="modal-description-box">
+              {getSelectedCivDescription()}
+            </div>
           </div>
         </div>
       </Modal>
