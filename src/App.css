@@ -18,7 +18,7 @@
 
 .hex {
   position: relative;
-  --hexagon-unit-width: 130px;
+  --hexagon-unit-width: 150px;
   --hexagon-unit-margin: 2px;
   width: var(--hexagon-unit-width);
   height: auto;
@@ -37,6 +37,10 @@
   y: calc(50% * (1.03 - 1));
 }
 
+.grayscale {
+  filter: grayscale(1);
+}
+
 .hex-flag {
   position: absolute;
   height: 40px;
@@ -44,6 +48,26 @@
   top: 85%;
   transform: translate(-50%, -50%);
   z-index: 1;
+}
+
+.banned-symbol {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  font-size: 100px;
+  color: red;
+}
+
+.checkmark-symbol {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  font-size: 100px;
+  color: green;
 }
 
 .row {
@@ -169,8 +193,4 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-}
-
-.banned {
-  filter: grayscale(1);
 }
