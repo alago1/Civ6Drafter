@@ -151,3 +151,18 @@
 .select-button {
   background-color: green;
 }
+
+.description-li {
+  margin: 5px 0px;
+}
+
+.description-icon {
+  margin: 5px;
+  height: 44px;
+}
+
+.modal-description-span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

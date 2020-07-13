@@ -49,9 +49,21 @@ function App() {
           key_desc.push(
             <li
               key={`${selectedInfo.nation}-${selectedInfo.leader}-${key}-${index}`}
+              className="description-li"
             >
               <strong>{param}: </strong>
-              {selectedInfo[key][param]}
+              <span className="modal-description-span">
+                {typeof selectedInfo[key][param] === "object" && (
+                  <img
+                    src={selectedInfo[key][param].image}
+                    alt=""
+                    className="description-icon"
+                  />
+                )}
+                {typeof selectedInfo[key][param] === "object"
+                  ? selectedInfo[key][param].description
+                  : selectedInfo[key][param]}
+              </span>
             </li>
           );
         });
