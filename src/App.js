@@ -8,6 +8,7 @@ Modal.setAppElement("#root");
 function App() {
   const [modalIsOpen, setIsOpen] = useState(false);
   const [selectedInfo, setSelectedInfo] = useState({});
+  const [bannedCivs, setBannedCivs] = useState(new Set());
 
   const openModal = (new_selection_info) => {
     setIsOpen(true);
@@ -95,21 +96,35 @@ function App() {
     return fullDescription;
   };
 
+  const banSeletedCiv = () => {
+    setBannedCivs(bannedCivs.add(selectedInfo.name));
+    closeModal();
+  };
+
+  const unbanSelectedCiv = () => {
+    bannedCivs.delete(selectedInfo.name);
+    setBannedCivs(bannedCivs);
+    closeModal();
+  };
+
   const hexGrid = Object.keys(civs).map((elem, index) => {
     if (elem === "default") return <></>;
 
     let civInfo = parseCivInfo(civs[elem]);
     return (
       <div className="hex">
-        <img src={civInfo.flag} alt="" className="hex-flag" />
+        <img
+          src={civInfo.flag}
+          alt=""
+          className="hex-flag"
+          onClick={() => openModal(civInfo)}
+        />
         <Hexagon
           key={Object.keys(civs)[index + 1]}
           backgroundImage={civInfo.portrait}
           backgroundScale={1.03}
-          onClick={() => {
-            console.log(civInfo);
-            openModal(civInfo);
-          }}
+          className={bannedCivs.has(civInfo.name) ? "banned" : ""}
+          onClick={() => openModal(civInfo)}
         />
       </div>
     );
@@ -156,7 +171,9 @@ function App() {
             <img
               src={selectedInfo.portrait}
               alt=""
-              className="modal-selected-portrait"
+              className={`modal-selected-portrait ${
+                bannedCivs.has(selectedInfo.name) ? "banned" : ""
+              }`}
             />
             <img
               src={selectedInfo.flag}
@@ -178,8 +195,15 @@ function App() {
               />
               Wiki Page
             </a>
-            <button className="modal-button ban-button" onClick={closeModal}>
-              Ban
+            <button
+              className="modal-button ban-button"
+              onClick={
+                bannedCivs.has(selectedInfo.name)
+                  ? unbanSelectedCiv
+                  : banSeletedCiv
+              }
+            >
+              {bannedCivs.has(selectedInfo.name) ? "Unban" : "Ban"}
             </button>
             <button className="modal-button select-button" onClick={closeModal}>
               Select
