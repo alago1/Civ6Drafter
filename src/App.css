@@ -1,12 +1,15 @@
 .App {
   text-align: center;
   box-sizing: border-box;
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hex-grid {
   position: relative;
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -107,6 +110,12 @@
   background-color: transparent;
   margin-top: -10px;
   font-size: 30px;
+  outline: none;
+  transition: color 0.2s ease;
+}
+
+.modal-close-button:active {
+  color: darkred;
 }
 
 .modal-content {
@@ -166,6 +175,8 @@
   border: 0px;
   font-size: larger;
   text-transform: uppercase;
+  outline: none;
+  transition: background-color 0.2s ease;
 }
 
 .modal-button:hover {
@@ -176,8 +187,16 @@
   background-color: red;
 }
 
+.ban-button:active {
+  background-color: darkred;
+}
+
 .select-button {
   background-color: green;
+}
+
+.select-button:active {
+  background-color: darkgreen;
 }
 
 .description-li {
@@ -193,4 +212,65 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.random-draft-button {
+  margin: 20px;
+  background-color: yellowgreen;
+}
+
+.random-draft-button:active {
+  background-color: green;
+}
+
+.random-draft-modal-content * {
+  color: whitesmoke;
+}
+
+.selected-names {
+  width: calc(100% - 40px);
+  resize: none;
+  color: black;
+  font-size: 1.5rem;
+  margin: 5px 20px;
+  border: none;
+  border-radius: 10px;
+}
+
+.run-draft-button {
+  float: right;
+  width: 250px;
+  height: 80px;
+  background-color: yellowgreen;
+  color: black;
+  font-size: 30px;
+}
+
+.run-draft-button:active {
+  background-color: green;
+}
+
+.random-draft-cards-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.random-draft-card-result {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  margin-bottom: 30px;
+  width: calc(50% - 20px);
+}
+
+.card-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+
+.card-text {
+  margin: 0;
 }

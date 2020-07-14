@@ -1,6 +1,7 @@
 import React from "react";
 import HexGrid from "./Components/HexGrid";
 import CharacterPanel from "./Components/CharacterPanel";
+import RandomSelector from "./Components/RandomSelector";
 import "./App.css";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <div className="App">
       <HexGrid />
       <CharacterPanel />
+      <RandomSelector />
     </div>
   );
 }

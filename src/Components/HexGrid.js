@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { useRecoilValue, useSetRecoilState } from "recoil";
 import {
   modalState,
@@ -42,37 +42,40 @@ function HexGrid() {
 
     let civInfo = parseCivInfo(civs[elem]);
     return (
-      <div className="hex">
+      <div className="hex" key={`hexagon-div-${index}`}>
         <img
           src={civInfo.flag}
           alt=""
           className="hex-flag"
           onClick={() => openModal(civInfo)}
         />
-        <span
+        {/* <span
           className="banned-symbol"
           style={{
-            visibility: bannedCivs.has(civInfo.name) ? "visible" : "hidden",
+            visibility: bannedCivs.has(`${civInfo.name} of ${civInfo.nation}`) ? "visible" : "hidden",
           }}
           onClick={() => openModal(civInfo)}
         >
           &#10006;
-        </span>
+        </span> */}
         <span
           className="checkmark-symbol"
           style={{
-            visibility: playerCivs.has(civInfo.name) ? "visible" : "hidden",
+            visibility: playerCivs.has(`${civInfo.name} of ${civInfo.nation}`)
+              ? "visible"
+              : "hidden",
           }}
           onClick={() => openModal(civInfo)}
         >
           &#10004;
         </span>
         <Hexagon
-          key={Object.keys(civs)[index + 1]}
+          key={`hexagon-${index}`}
           backgroundImage={civInfo.portrait}
           backgroundScale={1.03}
           className={
-            bannedCivs.has(civInfo.name) || playerCivs.has(civInfo.name)
+            bannedCivs.has(`${civInfo.name} of ${civInfo.nation}`) ||
+            playerCivs.has(`${civInfo.name} of ${civInfo.nation}`)
               ? "grayscale"
               : ""
           }
@@ -86,9 +89,11 @@ function HexGrid() {
     <div className="hex-grid">
       {[...Array(n_rows).keys()].map((row_index) => (
         <div className="row" key={row_index}>
-          {[...Array(cells_per_row).keys()].map(
-            (col_index) => hexGrid[cells_per_row * row_index + col_index]
-          )}
+          {[...Array(cells_per_row).keys()].map((col_index) => (
+            <Fragment key={`${row_index}-${col_index}`}>
+              {hexGrid[cells_per_row * row_index + col_index]}
+            </Fragment>
+          ))}
         </div>
       ))}
     </div>

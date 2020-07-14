@@ -19,25 +19,37 @@ function CharacterPanel() {
   const closeModal = () => setIsOpen(false);
 
   const banSeletedCiv = () => {
-    setBannedCivs(bannedCivs.add(selectedInfo.name));
+    setBannedCivs((bans) => {
+      const new_bans = new Set(bans);
+      new_bans.add(`${selectedInfo.name} of ${selectedInfo.nation}`);
+      return new_bans;
+    });
     closeModal();
   };
 
   const unbanSelectedCiv = () => {
-    bannedCivs.delete(selectedInfo.name);
-    setBannedCivs(bannedCivs);
-    closeModal();
+    setBannedCivs((bans) => {
+      const new_bans = new Set(bans);
+      new_bans.delete(`${selectedInfo.name} of ${selectedInfo.nation}`);
+      return new_bans;
+    });
   };
 
   const playerSelectCiv = () => {
-    setPlayerCivs(playerCivs.add(selectedInfo.name));
+    setPlayerCivs((playerSelectedCivs) => {
+      const new_playerCivs = new Set(playerSelectedCivs);
+      new_playerCivs.add(`${selectedInfo.name} of ${selectedInfo.nation}`);
+      return new_playerCivs;
+    });
     closeModal();
   };
 
   const playerUnselectCiv = () => {
-    playerCivs.delete(selectedInfo.name);
-    setPlayerCivs(playerCivs);
-    closeModal();
+    setPlayerCivs((playerSelectedCivs) => {
+      const new_playerCivs = new Set(playerSelectedCivs);
+      new_playerCivs.delete(`${selectedInfo.name} of ${selectedInfo.nation}`);
+      return new_playerCivs;
+    });
   };
 
   const getSelectedCivDescription = () => {
@@ -83,11 +95,11 @@ function CharacterPanel() {
     };
 
     fullDescription.push(
-      <div>
+      <div key={`leader-features`}>
         <h3>Leader Features and Abilities</h3>
         <ul>{genDescriptionByKey("leader-description")}</ul>
       </div>,
-      <div>
+      <div key={`civilization-features`}>
         <h3>Civilization Features and Abilities</h3>
         <ul>{genDescriptionByKey("civ-description")}</ul>
       </div>
@@ -96,7 +108,7 @@ function CharacterPanel() {
     const dlc_modifiers = genDescriptionByKey("dlc-modifiers");
     if (dlc_modifiers.length !== 0) {
       fullDescription.push(
-        <div>
+        <div key="dlc_modifiers">
           <h3>DLC Modifiers</h3>
           <ul>{dlc_modifiers}</ul>
         </div>
@@ -126,7 +138,7 @@ function CharacterPanel() {
           borderRadius: "50px",
         },
       }}
-      contentLabel="character-info-modal"
+      contentLabel="Character Panel"
     >
       <button onClick={closeModal} className="modal-close-button">
         {/* styled x-symbol */}
@@ -138,8 +150,10 @@ function CharacterPanel() {
             src={selectedInfo.portrait}
             alt=""
             className={`modal-selected-portrait ${
-              bannedCivs.has(selectedInfo.name) ||
-              playerCivs.has(selectedInfo.name)
+              bannedCivs.has(
+                `${selectedInfo.name} of ${selectedInfo.nation}`
+              ) ||
+              playerCivs.has(`${selectedInfo.name} of ${selectedInfo.nation}`)
                 ? "grayscale"
                 : ""
             }`}
@@ -163,24 +177,32 @@ function CharacterPanel() {
           <button
             className="modal-button ban-button"
             onClick={
-              bannedCivs.has(selectedInfo.name)
+              bannedCivs.has(`${selectedInfo.name} of ${selectedInfo.nation}`)
                 ? unbanSelectedCiv
                 : banSeletedCiv
             }
-            disabled={playerCivs.has(selectedInfo.name)}
+            disabled={playerCivs.has(
+              `${selectedInfo.name} of ${selectedInfo.nation}`
+            )}
           >
-            {bannedCivs.has(selectedInfo.name) ? "Unban" : "Ban"}
+            {bannedCivs.has(`${selectedInfo.name} of ${selectedInfo.nation}`)
+              ? "Unban"
+              : "Ban"}
           </button>
           <button
             className="modal-button select-button"
             onClick={
-              playerCivs.has(selectedInfo.name)
+              playerCivs.has(`${selectedInfo.name} of ${selectedInfo.nation}`)
                 ? playerUnselectCiv
                 : playerSelectCiv
             }
-            disabled={bannedCivs.has(selectedInfo.name)}
+            disabled={bannedCivs.has(
+              `${selectedInfo.name} of ${selectedInfo.nation}`
+            )}
           >
-            {playerCivs.has(selectedInfo.name) ? "Deselect" : "Select"}
+            {playerCivs.has(`${selectedInfo.name} of ${selectedInfo.nation}`)
+              ? "Deselect"
+              : "Select"}
           </button>
         </div>
         <div className="modal-description">

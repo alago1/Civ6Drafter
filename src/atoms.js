@@ -19,3 +19,13 @@ export const modalState = atom({
   key: "modalState",
   default: false,
 });
+
+export const selectedPlayersNames = atom({
+  key: "selected-players-names",
+  default: "",
+});
+
+export const draftPlayersNames = atom({
+  key: "draft-players-names",
+  default: "",
+});
