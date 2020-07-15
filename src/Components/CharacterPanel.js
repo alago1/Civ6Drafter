@@ -159,13 +159,12 @@ function CharacterPanel() {
             }`}
           />
           <img src={selectedInfo.flag} alt="" className="modal-selected-flag" />
-          <br />
-          <br />
           <a
             href={selectedInfo.wiki}
             target="_blank"
             rel="noopener noreferrer"
             className="modal-wiki-link"
+            style={{ marginTop: "50px" }}
           >
             <img
               src="https://img.icons8.com/metro/26/000000/external-link.png"
