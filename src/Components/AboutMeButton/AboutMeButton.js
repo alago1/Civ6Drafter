@@ -5,7 +5,7 @@ import styles from "./AboutMeButton.module.css";
 function AboutMeButton(props) {
   const dimensions = {
     width: typeof props.scale === "number" ? `${220 * props.scale}px` : "220px",
-    height: typeof props.scale === "number" ? `${80 * props.scale}px` : "80px",
+    height: typeof props.scale === "number" ? `${70 * props.scale}px` : "70px",
   };
 
   const fontSize =

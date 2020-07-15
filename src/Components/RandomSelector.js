@@ -18,16 +18,16 @@ function RandomSelector() {
   const [draftedPlayers, setDraftedPlayers] = useRecoilState(draftPlayersNames);
 
   const [modalIsOpen, setIsOpen] = useState(false);
-  const [modalDraftStage, setDraftStage] = useState(0);
+  const [modalShowResults, setShowResults] = useState(false);
   const [draftResults, setDraftResults] = useState();
 
   const closeModal = () => {
     setIsOpen(false);
-    if (modalDraftStage === 0 && playerCivs.size !== 0)
+    if (!modalShowResults && playerCivs.size !== 0)
       setSelectedPlayers(document.getElementById("selected-names").value);
-    if (modalDraftStage === 0 && remainingCivs.length !== 0)
+    if (!modalShowResults && remainingCivs.length !== 0)
       setDraftedPlayers(document.getElementById("draft-names").value);
-    setDraftStage(0);
+    setShowResults(false);
   };
 
   const allCivsByName = useMemo(() => {
@@ -189,7 +189,7 @@ function RandomSelector() {
     });
     // console.log(fullSetup);
     setDraftResults(draftCompleteResults);
-    setDraftStage(1);
+    setShowResults(true);
   };
 
   return (
@@ -226,7 +226,7 @@ function RandomSelector() {
           {/* styled x-symbol */}
           &#10006;
         </button>
-        {modalDraftStage !== 1 && (
+        {!modalShowResults && (
           <div className="random-draft-modal-content">
             <h1 style={{ fontSize: "3rem", margin: "0" }}>
               Random Draft Setup
@@ -296,7 +296,7 @@ function RandomSelector() {
             </button>
           </div>
         )}
-        {modalDraftStage === 1 && (
+        {modalShowResults && (
           <div className="random-draft-modal-content">
             <h1 style={{ fontSize: "3rem", margin: "0" }}>
               Random Draft Results
