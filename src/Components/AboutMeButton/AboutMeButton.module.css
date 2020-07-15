@@ -1,0 +1,45 @@
+.button-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50px;
+  background-color: red;
+  transition: background-color 0.3s ease;
+}
+
+.button-wrapper:hover {
+  cursor: pointer;
+  background-color: rgb(230, 14, 14);
+}
+
+.button-text {
+  color: rgb(34, 33, 33);
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5px;
+  margin: 5px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.profile-pic-wrapper {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  height: 60%;
+  width: fit-content;
+  border-radius: 100%;
+  margin: 5px;
+  border: 1px solid whitesmoke;
+}
+
+.profile-pic {
+  height: 100%;
+  width: auto;
+  clip-path: circle(50%);
+}
