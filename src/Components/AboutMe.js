@@ -70,9 +70,7 @@ function AboutMe() {
                         className="clickable-image-wrapper"
                         style={{ width: "auto" }}
                       >
-                        <h1 className="clickable-description-title">
-                          {socialLinks[elem].title}
-                        </h1>
+                        <h1 className="card-text">{socialLinks[elem].title}</h1>
                       </a>
                       <a
                         href={socialLinks[elem].href}
@@ -81,7 +79,7 @@ function AboutMe() {
                         className="clickable-image-wrapper"
                         style={{ width: "auto" }}
                       >
-                        <h3 className="clickable-description-subtitle">
+                        <h3 className="card-text indented-subtitle">
                           {socialLinks[elem].subtitle}
                         </h3>
                       </a>

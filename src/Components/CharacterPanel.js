@@ -7,6 +7,7 @@ import {
 } from "../atoms";
 import { useRecoilValue, useRecoilState } from "recoil";
 import Modal from "react-modal";
+import { useWindowDimensions } from "../hooks";
 
 Modal.setAppElement("#root");
 function CharacterPanel() {
@@ -17,6 +18,10 @@ function CharacterPanel() {
 
   //handle to make it easier to read
   const closeModal = () => setIsOpen(false);
+
+  //updates with windowDimensions
+  // eslint-disable-next-line
+  const [windowWidth, windowHeight] = useWindowDimensions();
 
   const banSeletedCiv = () => {
     setBannedCivs((bans) => {
@@ -129,10 +134,10 @@ function CharacterPanel() {
         },
 
         content: {
-          top: "20%",
-          left: "20%",
-          right: "20%",
-          bottom: "20%",
+          top: windowWidth > 768 ? "20%" : "10%",
+          left: windowWidth > 768 ? "20%" : "10%",
+          right: windowWidth > 768 ? "20%" : "10%",
+          bottom: windowWidth > 768 ? "20%" : "10%",
           backgroundColor: "#222831",
           border: "3px solid #121212",
           borderRadius: "50px",
@@ -146,25 +151,30 @@ function CharacterPanel() {
       </button>
       <div className="modal-content">
         <div className="modal-portrait">
-          <img
-            src={selectedInfo.portrait}
-            alt=""
-            className={`modal-selected-portrait ${
-              bannedCivs.has(
-                `${selectedInfo.name} of ${selectedInfo.nation}`
-              ) ||
-              playerCivs.has(`${selectedInfo.name} of ${selectedInfo.nation}`)
-                ? "grayscale"
-                : ""
-            }`}
-          />
-          <img src={selectedInfo.flag} alt="" className="modal-selected-flag" />
+          <div className="portrait-icon">
+            <img
+              src={selectedInfo.portrait}
+              alt=""
+              className={`modal-selected-portrait ${
+                bannedCivs.has(
+                  `${selectedInfo.name} of ${selectedInfo.nation}`
+                ) ||
+                playerCivs.has(`${selectedInfo.name} of ${selectedInfo.nation}`)
+                  ? "grayscale"
+                  : ""
+              }`}
+            />
+            <img
+              src={selectedInfo.flag}
+              alt=""
+              className="modal-selected-flag"
+            />
+          </div>
           <a
             href={selectedInfo.wiki}
             target="_blank"
             rel="noopener noreferrer"
             className="modal-wiki-link"
-            style={{ marginTop: "50px" }}
           >
             <img
               src="https://img.icons8.com/metro/26/000000/external-link.png"

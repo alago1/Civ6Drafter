@@ -7,7 +7,7 @@ import {
   bannedCivilizations,
 } from "../atoms";
 import Hexagon from "react-hexagon";
-import { useWindowDimensions } from "../hooks.js";
+import { useWindowDimensions } from "../hooks";
 import civs from "../civilizations.json";
 
 function HexGrid() {
@@ -69,8 +69,9 @@ function HexGrid() {
     });
 
   //grid setup
+  // eslint-disable-next-line
   const [windowWidth, windowHeight] = useWindowDimensions();
-  console.log(`width: ${windowWidth}px; height:${windowHeight}`);
+
   const getCellsPerRow = () => {
     if (windowWidth < 400) {
       return 3;
@@ -88,7 +89,9 @@ function HexGrid() {
   };
 
   const cells_per_row = getCellsPerRow();
-  const n_rows = Math.ceil((hexGrid.length - 1) / cells_per_row) + 1; //minimun number of rows given cells_per_row
+  const n_rows =
+    Math.ceil(hexGrid.length / cells_per_row) + //minimun number of rows given cells_per_row
+    (hexGrid.length % cells_per_row === 0 ? 1 : 0); // when total number of cells is divisible by cells_per_row, needs to add another row
 
   const openModal = (new_selection_info) => {
     setIsOpen(true);
@@ -116,6 +119,7 @@ function HexGrid() {
             {[...Array(n_cells_this_row).keys()].map((col_index) => {
               return (
                 <Fragment key={`${row_index}-${col_index}`}>
+                  {/* backwards here (then reversed in the stylesheet) because I want flags above to go over hexagons below it */}
                   {hexGrid[hexGrid.length - 1 - (cells_passed + col_index)]}
                 </Fragment>
               );
