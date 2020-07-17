@@ -69,16 +69,6 @@
   z-index: 1;
 }
 
-.banned-symbol {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  left: 50%;
-  top: 50%;
-  font-size: 100px;
-  color: red;
-}
-
 .checkmark-symbol {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -86,7 +76,7 @@
   left: 50%;
   top: 50%;
   font-size: 100px;
-  color: green;
+  color: #008000;
 }
 
 .row {
@@ -365,6 +355,9 @@
 
   .modal-content {
     display: initial;
+  }
+  .checkmark-symbol {
+    font-size: 80px;
   }
 }
 
