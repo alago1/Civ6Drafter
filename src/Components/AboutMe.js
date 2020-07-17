@@ -2,11 +2,16 @@ import React, { useState } from "react";
 import Modal from "react-modal";
 import AboutMeButton from "./AboutMeButton/AboutMeButton";
 import socialLinks from "../socialLinks.json";
+import { useWindowDimensions } from "../hooks";
 
 function AboutMe() {
   const [modalIsOpen, setIsOpen] = useState(false);
 
   const closeModal = () => setIsOpen(false);
+
+  //adapts to small screens
+  // eslint-disable-next-line
+  const [windowWidth, windowHeight] = useWindowDimensions();
 
   return (
     <div className="about-me">
@@ -25,10 +30,10 @@ function AboutMe() {
           },
 
           content: {
-            top: "20%",
-            left: "20%",
-            right: "20%",
-            bottom: "20%",
+            top: windowWidth > 768 ? "20%" : "10%",
+            left: windowWidth > 768 ? "20%" : "10%",
+            right: windowWidth > 768 ? "20%" : "10%",
+            bottom: windowWidth > 768 ? "20%" : "10%",
             backgroundColor: "#222831",
             border: "3px solid #121212",
             borderRadius: "50px",
