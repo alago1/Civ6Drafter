@@ -89,9 +89,7 @@ function HexGrid() {
   };
 
   const cells_per_row = getCellsPerRow();
-  const n_rows =
-    Math.ceil(hexGrid.length / cells_per_row) + //minimun number of rows given cells_per_row
-    (hexGrid.length % cells_per_row === 0 ? 1 : 0); // when total number of cells is divisible by cells_per_row, needs to add another row
+  const n_rows = Math.ceil(hexGrid.length / cells_per_row) + 1; //minimun number of rows given cells_per_row
 
   const openModal = (new_selection_info) => {
     setIsOpen(true);
