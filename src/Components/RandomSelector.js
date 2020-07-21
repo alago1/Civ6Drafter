@@ -257,7 +257,7 @@ function RandomSelector() {
                   id="selected-names"
                   name="selected-names"
                   cols="1"
-                  rows={Math.min(6, Array.from(playerCivs.values()).length)}
+                  rows={Math.min(6, playerCivs.size)}
                   className="selected-names"
                   defaultValue={selectedPlayers}
                 />
@@ -265,19 +265,10 @@ function RandomSelector() {
             )}
             <div className="random-draft-draft">
               <h2 style={{ marginBottom: "5px" }}>Draft</h2>
-              <h3 style={{ margin: "0px", marginLeft: "10px" }}>
-                The following civilizations (not banned, or selected) will be
-                used in the draft. Please enter the names of the players (one
-                player per line) who will take part in the draft.
-              </h3>
-              <h3
-                style={{
-                  margin: "5px",
-                  textIndent: "20px",
-                  fontSize: "1.25rem",
-                }}
-              >
-                {remainingCivs.join(", ")}
+              <h3 style={{ margin: "0px 0px 20px 10px" }}>
+                Civilizations neither banned nor selected will be used in the
+                draft. Please enter the names of the players (one player per
+                line) who will take part in the draft.
               </h3>
               <textarea
                 id="draft-names"

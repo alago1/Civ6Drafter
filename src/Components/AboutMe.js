@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import AboutMeButton from "./AboutMeButton/AboutMeButton";
-import socialLinks from "../socialLinks.json";
+import { socialLinks } from "./socialLinks.js";
 import { useWindowDimensions } from "../hooks";
 
 function AboutMe() {
@@ -61,11 +61,12 @@ function AboutMe() {
                       rel="noopener noreferrer"
                       className="clickable-image-wrapper"
                     >
-                      <img
+                      {socialLinks[elem].component}
+                      {/* <img
                         src={socialLinks[elem].image}
                         alt=""
                         className="clickable-image"
-                      />
+                      /> */}
                     </a>
                     <div className="clickable-description">
                       <a
