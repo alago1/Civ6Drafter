@@ -295,7 +295,7 @@ function RandomSelector(props) {
                     className="random-draft-card-result"
                     key={`${draftRes.name}-draft-result-card`}
                   >
-                    <div className="modal-portrait">
+                    <div className="draft-results-portrait">
                       <img
                         src={draftRes.portrait}
                         alt=""

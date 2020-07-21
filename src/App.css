@@ -238,6 +238,13 @@
   color: whitesmoke;
 }
 
+.draft-results-portrait {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .selected-names {
   width: calc(100% - 40px);
   resize: none;
@@ -272,7 +279,7 @@
   align-items: center;
   padding: 10px;
   margin-bottom: 30px;
-  width: 50%;
+  min-width: 50%;
 }
 
 .card-text-wrapper {
@@ -359,6 +366,14 @@
   }
   .checkmark-symbol {
     font-size: 80px;
+  }
+
+  .modal-selected-portrait {
+    width: 100px;
+  }
+
+  .random-draft-card-result {
+    margin-bottom: 0;
   }
 }
 
