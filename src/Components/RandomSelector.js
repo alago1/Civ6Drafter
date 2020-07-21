@@ -1,26 +1,22 @@
 import React, { useState, useMemo } from "react";
-import { useRecoilValue, useRecoilState } from "recoil";
-import {
-  playerCivilizations,
-  bannedCivilizations,
-  selectedPlayersNames,
-  draftPlayersNames,
-} from "../atoms";
 import civs from "../civilizations.json";
 import Modal from "react-modal";
 
-function RandomSelector() {
-  const playerCivs = useRecoilValue(playerCivilizations);
-  const bannedCivs = useRecoilValue(bannedCivilizations);
-  const [selectedPlayers, setSelectedPlayers] = useRecoilState(
-    selectedPlayersNames
-  );
-  const [draftedPlayers, setDraftedPlayers] = useRecoilState(draftPlayersNames);
+function RandomSelector(props) {
+  const playerCivs = props.playerCivs;
+  const bannedCivs = props.bannedCivs;
 
+  const [selectedPlayers, setSelectedPlayers] = useState(""); //string with names of players for selected civs (one name per line)
+  const [draftedPlayers, setDraftedPlayers] = useState(""); //string with names of players participating in the draft (one name per line)
+
+  //related to modal
   const [modalIsOpen, setIsOpen] = useState(false);
   const [modalShowResults, setShowResults] = useState(false);
+
+  //results to be displayed in modal
   const [draftResults, setDraftResults] = useState();
 
+  //handler that updates state variables before closing modal
   const closeModal = () => {
     setIsOpen(false);
     if (!modalShowResults && playerCivs.size !== 0)

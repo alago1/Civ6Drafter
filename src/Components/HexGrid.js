@@ -1,23 +1,16 @@
 import React, { Fragment } from "react";
-import { useRecoilValue, useSetRecoilState } from "recoil";
-import {
-  modalState,
-  selectedCivilization,
-  playerCivilizations,
-  bannedCivilizations,
-} from "../atoms";
 import Hexagon from "react-hexagon";
 import { useWindowDimensions } from "../hooks";
 import civs from "../civilizations.json";
 
-function HexGrid() {
-  //setter only, does not subscribe to atom
-  const setIsOpen = useSetRecoilState(modalState);
-  const setSelectedInfo = useSetRecoilState(selectedCivilization);
+function HexGrid(props) {
+  //setter only
+  const setIsOpen = props.setModalState;
+  const setSelectedInfo = props.setSelectedCivInfo;
 
-  //atom subscriptions
-  const playerCivs = useRecoilValue(playerCivilizations);
-  const bannedCivs = useRecoilValue(bannedCivilizations);
+  //value only
+  const playerCivs = props.playerCivs;
+  const bannedCivs = props.bannedCivs;
 
   const parseCivInfo = (civ) => {
     let civInfo = civ;

@@ -1,20 +1,14 @@
 import React from "react";
-import {
-  selectedCivilization,
-  playerCivilizations,
-  bannedCivilizations,
-  modalState,
-} from "../atoms";
-import { useRecoilValue, useRecoilState } from "recoil";
 import Modal from "react-modal";
 import { useWindowDimensions } from "../hooks";
 
 Modal.setAppElement("#root");
-function CharacterPanel() {
-  const selectedInfo = useRecoilValue(selectedCivilization);
-  const [playerCivs, setPlayerCivs] = useRecoilState(playerCivilizations);
-  const [bannedCivs, setBannedCivs] = useRecoilState(bannedCivilizations);
-  const [modalIsOpen, setIsOpen] = useRecoilState(modalState);
+function CharacterPanel(props) {
+  const selectedInfo = props.selectedCivInfo;
+  const [playerCivs, setPlayerCivs] = [props.playerCivs, props.setPlayerCivs];
+  const [bannedCivs, setBannedCivs] = [props.bannedCivs, props.setBannedCivs];
+  //handle
+  const [modalIsOpen, setIsOpen] = [props.modalState, props.setModalState];
 
   //handle to make it easier to read
   const closeModal = () => setIsOpen(false);
