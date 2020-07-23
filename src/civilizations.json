@@ -565,5 +565,188 @@
     "dlc-modifiers": {
       "R&F Leader Bonus": "May declare war on any civilization at war with an ally without warmonger penalties. When at war with a common enemy, Sumerian and allied units share pillage rewards and combat experience if within 5 tiles of each other. Earn Alliance Points per-turn if both civilizations are at war with the same foe."
     }
+  },
+  "poland1": {
+    "name": "Jadwiga",
+    "nation": "Poland",
+    "portrait": "https://vignette.wikia.nocookie.net/civilization/images/f/f6/Jadwiga_%28Civ6%29.png/revision/latest?cb=20180225192412",
+    "flag": "",
+    "wiki": "https://civilization.fandom.com/wiki/Jadwiga_(Civ6)",
+    "leader-description": {
+      "Bonus - Lithuanian Union": "Taking territory from a foreign city with a Culture Bomb converts it to Poland's religion. Relics provide +4 Gold, +2 Culture and +2 Faith. Holy Sites receive a +1 adjacency bonus from districts, instead of +0.5.",
+      "AI Agenda - Saint": "Tries to build up Faith, and likes those that also focus on Faith. Dislikes civilizations with a weak Faith output.",
+      "AI Religion": {
+        "description": "Catholicism",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/b/b1/Catholicism_Icon_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200322155025"
+      }
+    },
+    "civ-description": {
+      "Civ Ability - Golden Liberty": "Building an Encampment or Fort triggers a Culture Bomb, claiming surrounding tiles. One Military policy slot in all governments is converted into a Wildcard policy slot.",
+      "Unique Unit": {
+        "description": "Winged Hussar (Heavy Cavalry - Medieval Era)",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/b/ba/Winged_Hussar_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200422045833"
+      },
+      "Unique Building": {
+        "description": "Sukiennice (Commercial Hub) - Replaces Market",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/6/62/Sukiennice_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20171027195218"
+      }
+    },
+    "dlc-modifiers": {}
+  },
+  "australia1": {
+    "name": "John Curtin",
+    "portrait": "https://vignette.wikia.nocookie.net/civilization/images/b/b9/John_Curtin_%28Civ6%29.png/revision/latest?cb=20180227141017",
+    "flag": "",
+    "wiki": "https://civilization.fandom.com/wiki/John_Curtin_(Civ6)",
+    "leader-description": {
+      "Bonus - Citadel of Civilization": "+100% Production in all cities for the next 10 turns after being declared war upon, and for the next 20 turns after liberating a city.",
+      "AI Agenda - Perpetually on Guard": "Forms Defensive Pacts with friends and likes civilizations that liberate cities. Dislikes civilizations that are occupying enemy cities."
+    },
+    "civ-description": {
+      "Civ Ability - Land Down Under": "+3 Housing in coastal cities. Building a Pasture triggers a Culture Bomb, claiming surrounding tiles. Campus, Commercial Hub, Holy Site, and Theater Square districts gain +1 to their yields in tiles with Charming Appeal, and +3 with Breathtaking Appeal.",
+      "Unique Unit": {
+        "description": "Digger (Melee - Modern Era) - Replaces Infantry",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/f/ff/Digger_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200422045732"
+      },
+      "Unique Tile Improvement": {
+        "description": "Outback Station",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/8/8f/Outback_Station_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20190815052610"
+      }
+    },
+    "dlc-modifiers": {
+      "GS Leader Bonus": "+100% Production in all cities for the next 10 turns after being declared war upon or liberating a city."
+    }
+  },
+  "persia1": {
+    "name": "Cyrus",
+    "nation": "Persia",
+    "portrait": "https://vignette.wikia.nocookie.net/civilization/images/1/14/Cyrus_%28Civ6%29.png/revision/latest?cb=20180227022814",
+    "flag": "",
+    "wiki": "https://civilization.fandom.com/wiki/Cyrus_(Civ6)",
+    "leader-description": {
+      "Bonus - Fall of Babylon": "+2 Movement for all units for the next 10 turns after declaring a Surprise War. Surprise Wars count as Formal Wars for the purposes of warmongering penalties and war weariness. Occupied cities have no penalties to their yields.",
+      "AI Agenda - Opportunist": "Will often declare Surprise Wars, and likes civilizations that do the same. Dislikes civilizations that don't declare Surprise Wars.",
+      "AI Religion": {
+        "description": "Zoroastrianism",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/1/14/Zoroastrianism_Icon_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200322155029"
+      }
+    },
+    "civ-description": {
+      "Civ Ability - Satrapies": "Gains +1 Trade Route capacity with Political Philosophy. Domestic Trade Routes provide +2 Gold and +1 Culture. Roads built inside Persian territory are one level more advanced than usual.",
+      "Unique Unit": {
+        "description": "Immortal (Melee - Classical Era) - Replaces Swordsman",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/3/39/Immortal_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200422045802"
+      },
+      "Unique Tile Improvement": {
+        "description": "Pairidaeza",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/c/ce/Pairidaeza_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20171027194844"
+      }
+    },
+    "dlc-modifiers": {
+      "R&F Leader Bonus": "+2 Movement for all units for the next 10 turns after declaring a Surprise War. Surprise Wars count as Formal Wars for the purposes of warmongering penalties and war weariness. Occupied cities have no penalties to their yields. +5 Loyalty per turn in occupied cities with a garrisoned unit.",
+      "GS Leader Bonus": "+2 Movement for all units for the next 10 turns after declaring a Surprise War. Declaring a Surprise War only counts as a Formal War for the purpose of Grievances and war weariness. Occupied cities have no penalties to their yields. +5 Loyalty per turn in occupied cities with a garrisoned unit."
+    }
+  },
+  "macedon1": {
+    "name": "Alexander",
+    "nation": "Macedon",
+    "portrait": "https://vignette.wikia.nocookie.net/civilization/images/3/33/Alexander_%28Civ6%29.png/revision/latest?cb=20180216210702",
+    "flag": "",
+    "wiki": "https://civilization.fandom.com/wiki/Alexander_(Civ6)",
+    "leader-description": {
+      "Bonus - To the World's End": "Macedonian cities never incur war weariness. All military units heal completely when a city with a Wonder is captured. Gain the Hetairoi unique unit with Horseback Riding.",
+      "AI Agenda - Short Life of Glory": "Likes civilizations at war with powers other than Macedon. Dislikes civilizations at peace."
+    },
+    "civ-description": {
+      "Civ Ability - Hellenistic Fusion": "Conquering a city grants a free Eureka for each Encampment and Campus district in the conquered city and a free Inspiration for each Holy Site and Theater Square district.",
+      "Unique Unit": {
+        "description": "Hypaspist (Melee - Classical Era) - Replaces Swordsman",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/d/d4/Hypaspist_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200422045752"
+      },
+      "Unique Building": {
+        "description": "Basilikoi Paides (Encampment) - Replaces Barracks",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/1/14/Basilikoi_Paides_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20171027195002"
+      }
+    },
+    "dlc-modifiers": {
+      "GS AI Agenda": "Grievances against this leader decay at twice the usual rate."
+    }
+  },
+  "nubia1": {
+    "name": "Amanitore",
+    "nation": "Nubia",
+    "portrait": "https://vignette.wikia.nocookie.net/civilization/images/b/b8/Amanitore_%28Civ6%29.png/revision/latest?cb=20171027193933",
+    "flag": "",
+    "wiki": "https://civilization.fandom.com/wiki/Amanitore_(Civ6)",
+    "leader-description": {
+      "Bonus - Kandake of Meroë": "+20% Production towards districts, increasing to +40% Production if there's a Nubian Pyramid adjacent to the City Center.",
+      "AI Agenda - City Planner": "Tries to keep the maximum number of districts in each city, and likes those that do the same. Dislikes civilizations that don't build as many districts as possible in their cities."
+    },
+    "civ-description": {
+      "Civ ability - Ta-Seti": "+50% Production toward Ranged units. Ranged units gain +50% combat experience. +1 Production for Mines over strategic resources, and +2 Gold for Mines over bonus and luxury resources.",
+      "Unique Unit": {
+        "description": "Pítati Archer (Ranged - Ancient Era) - Replaces Archer",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/6/60/P%C3%ADtati_Archer_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200422045824"
+      },
+      "Unique Tile Improvement": {
+        "description": "Nubian Pyramid",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/7/73/Nubian_Pyramid_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20171027200639"
+      }
+    },
+    "dlc-modifiers": {}
+  },
+  "khmer1": {
+    "name": "Jayavarman VII",
+    "nation": "Khmer",
+    "portrait": "https://vignette.wikia.nocookie.net/civilization/images/7/77/Jayavarman_VII_%28Civ6%29.png/revision/latest?cb=20171104052227",
+    "flag": "",
+    "wiki": "https://civilization.fandom.com/wiki/Jayavarman_VII_(Civ6)",
+    "leader-description": {
+      "Bonus - Monasteries of the King": "+2 Food and +1 Housing from Holy Sites adjacent to a river. Building a Holy Site triggers a Culture Bomb, claiming surrounding tiles.",
+      "AI Agenda - An End to Suffering": "Likes civilizations with many Holy Sites and a high average city Population. Dislikes civilizations lacking in either of these areas.",
+      "AI Religion": {
+        "description": "Buddhism",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/0/01/Buddhism_Icon_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200322155024"
+      }
+    },
+    "civ-description": {
+      "Civ Ability - Grand Barays": "+3 Faith and +1 Amenity from Aqueducts. +2 Food for Farms adjacent to an Aqueduct.",
+      "Unique Unit": {
+        "description": "Domrey (Siege - Medieval Era)",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/a/a4/Domrey_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200422045743"
+      },
+      "Unique Building": {
+        "description": "Prasat (Holy Site) - Replaces Temple",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/2/2f/Prasat_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200702090725"
+      }
+    },
+    "dlc-modifiers": {}
+  },
+  "indonesia1": {
+    "name": "Gitarja",
+    "nation": "Indonesia",
+    "portrait": "https://vignette.wikia.nocookie.net/civilization/images/e/e8/Gitarja_%28Civ6%29.png/revision/latest?cb=20171110022129",
+    "flag": "",
+    "wiki": "https://civilization.fandom.com/wiki/Gitarja_(Civ6)",
+    "leader-description": {
+      "Bonus - Exalted Goddess of the Three Worlds": "May purchase naval units with Faith. Religious units pay no movement cost to embark or disembark. City Centers adjacent to Coast or Lake tiles gain +2 Faith.",
+      "AI Agenda - Archipelagic State": "Likes civilizations that avoid having cities on small landmasses. Dislikes those who have numerous cities on such islands.",
+      "AI Religion": {
+        "description": "Hinduism",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/4/4f/Hinduism_Icon_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200322155026"
+      }
+    },
+    "civ-description": {
+      "Civ ability - Great Nusantara": "Coast and Lake tiles provide a +0.5 adjacency bonus for Holy Site, Campus, Industrial Zone, and Theater Square districts. Entertainment Complexes built adjacent to a Coast or Lake tile provide +1 Amenity.",
+      "Unique Unit": {
+        "description": "Jong (Naval Ranged - Medieval Era) - Replaces Frigate",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/4/40/Jong_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200422045813"
+      },
+      "Unique Tile Improvement": {
+        "description": "Kampung",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/8/86/Kampung_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20190815052831"
+      }
+    },
+    "dlc-modifiers": {}
   }
 }
