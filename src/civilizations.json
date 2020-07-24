@@ -18,6 +18,10 @@
     "wiki": "https://civilization.fandom.com/wiki/Teddy_Roosevelt_(Civ6)",
     "leader-description": {
       "Bonus - Roosevelt Corollary": "+5 Combat Strength for all units inside America's home continent. +1 Appeal to all tiles in a city with a National Park. Gain the Rough Rider unique unit with Rifling.",
+      "Unique Unit 1": {
+        "description": "Rough Rider (Heavy Cavalry - Industrial Era)",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/0/05/Rough_Rider_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20161127185223"
+      },
       "AI Agenda - Big Stick Policy": "Likes peaceful civilizations that have a city on his home continent. Dislikes civilizations starting wars on his continent.",
       "AI Religion": {
         "description": "Protestanism",
@@ -26,7 +30,7 @@
     },
     "civ-description": {
       "Civ Ability - Founding Fathers": "Government legacy bonuses accumulate in half the usual number of turns.",
-      "Unique Unit": {
+      "Unique Unit 2": {
         "description": "P-51 Mustang (Air Fighter - Atomic Era) - Replaces Fighter",
         "image": "https://vignette.wikia.nocookie.net/civilization/images/c/cd/P-51_Mustang_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20161127200803"
       },
@@ -1238,6 +1242,83 @@
       "Unique Tile Improvement": {
         "description": "Château",
         "image": "https://vignette.wikia.nocookie.net/civilization/images/1/1f/Ch%C3%A2teau_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20161109234422"
+      }
+    },
+    "dlc-modifiers": {}
+  },
+  "colombia1": {
+    "name": "Simón Bolívar",
+    "nation": "Gran Colombia",
+    "portrait": "https://vignette.wikia.nocookie.net/civilization/images/9/9d/Sim%C3%B3n_Bol%C3%ADvar_%28Civ6%29.png/revision/latest?cb=20200523004935",
+    "flag": "",
+    "wiki": "https://civilization.fandom.com/wiki/Sim%C3%B3n_Bol%C3%ADvar_(Civ6)",
+    "leader-description": {
+      "Bonus - Campaña Admirable": "Entering a new era grants a Comandante General, a unique type of Great Person.",
+      "AI Agenda - Carabobo": "Focuses on promoting his units by building many Encampments, and likes civilizations with many promoted units. Dislikes civilizations without an elite, highly-promoted army.",
+      "AI Religion": {
+        "description": "Catholicism",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/b/b1/Catholicism_Icon_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200322155025"
+      }
+    },
+    "civ-description": {
+      "Civ ability - Ejército Patriota": "+1 Movement for all units. Promoting a unit does not end that unit's turn.",
+      "Unique Unit": {
+        "description": "Llanero (Light Cavalry - Industrial Era)",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/a/a0/Llanero_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200528105459"
+      },
+      "Unique Tile Improvement": {
+        "description": "Hacienda",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/e/ea/Hacienda_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200522050000"
+      }
+    },
+    "dlc-modifiers": {}
+  },
+  "maya1": {
+    "name": "Lady Six Sky",
+    "nation": "Maya",
+    "portrait": "https://vignette.wikia.nocookie.net/civilization/images/7/77/Lady_Six_Sky_%28Civ6%29.png/revision/latest?cb=20200523012819",
+    "flag": "",
+    "wiki": "https://civilization.fandom.com/wiki/Lady_Six_Sky_(Civ6)",
+    "leader-description": {
+      "Bonus - Ix Mutal Ajaw": "Non-capital cities gain +10% to all yields if within six tiles of the Mayan Capital, and -15% to all yields if more than six tiles away. +5 Combat Strength for all units within six tiles of the Mayan Capital.",
+      "AI Agenda - Solitary": "Keeps her cities clustered around her Capital, and likes civilizations who settle far from her. Dislikes those who encroach upon her borders with cities or troops."
+    },
+    "civ-description": {
+      "Civ ability - Mayab": "Cities don't receive additional Housing from being adjacent to fresh water or coast. Cities gain +1 Amenity for each Luxury Resource adjacent to the City Center. Farms grant +1 Housing and +1 Gold.",
+      "Unique Unit": {
+        "description": "Hul'che (Ranged - Ancient Era) - Replaces Archer",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/f/f4/Hul%27che_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200528105458"
+      },
+      "Unique District": {
+        "description": "Observatory - Replaces Campus",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/8/86/Observatory_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200514171315"
+      }
+    },
+    "dlc-modifiers": {}
+  },
+  "ethiopia1": {
+    "name": "Menelik II",
+    "nation": "Ethiopia",
+    "portrait": "https://vignette.wikia.nocookie.net/civilization/images/9/97/Menelik_II_%28Civ6%29.png/revision/latest?cb=20200723182638",
+    "flag": "",
+    "wiki": "https://civilization.fandom.com/wiki/Menelik_II_(Civ6)",
+    "leader-description": {
+      "Bonus - Council of Ministers": "Ethiopian cities founded on Hills receive Science and Culture equal to 15% of their Faith output. +4 Combat Strength for all units when fighting on Hills.",
+      "AI Agenda - Ethiopian Highlands": "Tries to settle cities on Hills, and likes civilizations who avoid settling near Hills. Dislikes civilizations that settle around Hills.",
+      "AI Religion": {
+        "description": "Eastern Orthodoxy",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/5/51/Eastern_Orthodoxy_Icon_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200322155026"
+      }
+    },
+    "civ-description": {
+      "Civ ability - Aksumite Legacy": "+1 Faith from improved resources. International Trade Routes grant +0.5 Faith for each resource in the origin city. Can purchase Archaeologists and Archaeological Museums with Faith.",
+      "Unique Unit": {
+        "description": "Oromo Cavalry (Light Cavalry - Medieval Era) - Replaces Courser",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/d/d3/Oromo_Cavalry_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200723184545"
+      },
+      "Unique Tile Improvement": {
+        "description": "Rock-Hewn Church",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/a/a7/Rock-Hewn_Church_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200723190751"
       }
     },
     "dlc-modifiers": {}
