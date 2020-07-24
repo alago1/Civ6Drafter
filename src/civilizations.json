@@ -197,6 +197,10 @@
     "flag": "https://gamepedia.cursecdn.com/civ6_gamepedia_en/6/6e/Icon_civilization_england.png?version=0dc226ce4502d42bd7ee2827842ef6cc",
     "leader-description": {
       "Bonus - Pax Britannica": "Founding a city or building a Royal Navy Dockyard outside of England's home continent grants a free melee unit in that city. Gain the Redcoat unique unit with Military Science.",
+      "Unique Unit 1": {
+        "description": "Redcoat (Melee - Industrial Era)",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/a/a2/Redcoat_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20161128033351"
+      },
       "AI Agenda - Sun Never Sets": "Likes civilizations who have a city on her home continent, and will try to expand to all continents. Dislikes civilizations on continents where she has no cities.",
       "AI Religion": {
         "description": "Protestantism",
@@ -205,7 +209,7 @@
     },
     "civ-description": {
       "Civ Ability - British Museum": "Each Archaeological Museum can hold six Artifacts instead of three and build two Archaeologists instead of one. Archaeological Museums are automatically themed when they have six Artifacts.",
-      "Unique Unit": {
+      "Unique Unit 2": {
         "description": "Sea Dog (Naval Raider - Renaissance Era) - Replaces Privateer",
         "image": "https://vignette.wikia.nocookie.net/civilization/images/3/33/Sea_Dog_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20161127202842"
       },
@@ -414,6 +418,10 @@
     "wiki": "https://civilization.fandom.com/wiki/Harald_Hardrada_(Civ6)",
     "leader-description": {
       "Bonus - Thunderbolt of the North": "+50% Production toward naval melee units. Naval melee units gain the ability to perform coastal raids. Gain the Viking Longship unique unit with Sailing.",
+      "Unique Unit 1": {
+        "description": "Viking Longship (Naval Melee - Ancient Era) - Replaces Galley",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/3/36/Viking_Longship_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20161127225720"
+      },
       "AI Agenda - Last Viking King": "Builds a strong navy, and likes civilizations that do the same. Dislikes civilizations that neglect their navies.",
       "AI Religion": {
         "description": "Protestantism",
@@ -422,7 +430,7 @@
     },
     "civ-description": {
       "Civ Ability - Knarr": "Can enter Ocean tiles with Shipbuilding, instead of Cartography. All units pay no movement cost to embark or disembark. Naval melee units can heal in neutral territory.",
-      "Unique Unit": {
+      "Unique Unit 2": {
         "description": "Berserker (Melee - Medieval Era)",
         "image": "https://vignette.wikia.nocookie.net/civilization/images/7/7e/Berserker_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20161106193003"
       },
@@ -659,11 +667,15 @@
     "wiki": "https://civilization.fandom.com/wiki/Alexander_(Civ6)",
     "leader-description": {
       "Bonus - To the World's End": "Macedonian cities never incur war weariness. All military units heal completely when a city with a Wonder is captured. Gain the Hetairoi unique unit with Horseback Riding.",
+      "Unique Unit 1": {
+        "description": "Hetairoi (Heavy Cavalry - Classical Era) - Replaces Horseman",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/2/22/Hetairoi_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200422080941"
+      },
       "AI Agenda - Short Life of Glory": "Likes civilizations at war with powers other than Macedon. Dislikes civilizations at peace."
     },
     "civ-description": {
       "Civ Ability - Hellenistic Fusion": "Conquering a city grants a free Eureka for each Encampment and Campus district in the conquered city and a free Inspiration for each Holy Site and Theater Square district.",
-      "Unique Unit": {
+      "Unique Unit 2": {
         "description": "Hypaspist (Melee - Classical Era) - Replaces Swordsman",
         "image": "https://vignette.wikia.nocookie.net/civilization/images/d/d4/Hypaspist_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200422045752"
       },
@@ -992,6 +1004,10 @@
     "wiki": "https://civilization.fandom.com/wiki/Matthias_Corvinus_(Civ6)",
     "leader-description": {
       "Bonus - Raven King": "Levied city-state units gain +2 Movement and +5 Combat Strength, and can be upgraded at a 75% discount in Gold and resources. Levying troops from a city-state grants 2 Envoys with that city-state. Gain the Black Army unique unit with Castles.",
+      "Unique Unit 1": {
+        "description": "Black Army (Light Cavalry - Medieval Era) - Replaces Courser",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/d/d2/Black_Army_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200421200513"
+      },
       "AI Agenda - Raven Banner": "Will often levy troops from city-states, and likes those who do the same. Dislikes civilizations that shun use of these mercenaries.",
       "AI Religion": {
         "description": "Catholicism",
@@ -1000,7 +1016,7 @@
     },
     "civ-description": {
       "Civ ability - Pearl of the Danube": "+50% Production for districts and buildings built across a river from a City Center.",
-      "Unique Unit": {
+      "Unique Unit 2": {
         "description": "Huszár (Light Cavalry - Industrial Era) - Replaces Cavalry",
         "image": "https://vignette.wikia.nocookie.net/civilization/images/3/35/Husz%C3%A1r_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200421200557"
       },
@@ -1146,6 +1162,10 @@
     "wiki": "https://civilization.fandom.com/wiki/Suleiman_(Civ6)",
     "leader-description": {
       "Bonus - Grand Vizier": "Has access to a unique Governor, Ibrahim, the Grand Vizier. Gain the Janissary unique unit with Gunpowder.",
+      "Unique Unit 1": {
+        "description": "Janissary (Melee - Renaissance Era) - Replaces Musketman",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/7/73/Janissary_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200421200608"
+      },
       "AI Agenda - Lawgiver": "Tries to keep his cities happy and loyal, and likes those who do the same, especially if they have taken cities from other civilizations. Dislikes those who struggle with happiness and loyalty, or that own few conquered cities.",
       "AI Religion": {
         "description": "Islam",
@@ -1154,7 +1174,7 @@
     },
     "civ-description": {
       "Civ ability - Great Turkish Bombard": "+50% Production toward Siege units. Siege units gain +5 Combat Strength against defensible districts. Conquering a city doesn't cause that city to lose Population. +1 Amenity and +4 Loyalty per turn for cities not founded by the Ottomans.",
-      "Unique Unit": {
+      "Unique Unit 2": {
         "description": "Barbary Corsair (Naval Raider - Medieval Era) - Replaces Privateer",
         "image": "https://vignette.wikia.nocookie.net/civilization/images/4/49/Barbary_Corsair_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200421200448"
       },
