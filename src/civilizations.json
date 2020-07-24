@@ -748,5 +748,236 @@
       }
     },
     "dlc-modifiers": {}
+  },
+  "cree1": {
+    "name": "Poundmaker",
+    "nation": "Cree",
+    "portrait": "https://vignette.wikia.nocookie.net/civilization/images/3/3b/Poundmaker_%28Civ6%29.png/revision/latest?cb=20180218220056",
+    "flag": "",
+    "wiki": "https://civilization.fandom.com/wiki/Poundmaker_(Civ6)",
+    "leader-description": {
+      "Bonus - Favorable Terms": "All Alliance types provide Shared Visibility. Trade Routes grant +1 Food in the sending city and +1 Gold in the destination city per Camp or Pasture at the destination city.",
+      "AI Agenda - Iron Confederacy": "Establishes as many Alliances as possible, and likes those who do the same. Dislikes civilizations that don't establish Alliances."
+    },
+    "civ-description": {
+      "Civ ability - Nîhithaw": "Gains +1 Trade Route capacity and a free Trader with Pottery. Unclaimed tiles within three tiles of a Cree city come under Cree control when a Trader first moves into them.",
+      "Unique Unit": {
+        "description": "Okihtcitaw (Recon - Ancient Era) - Replaces Scout",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/d/d2/Okihtcitaw_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200422044438"
+      },
+      "Unique Tile Improvement": {
+        "description": "Mekewap",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/0/08/Mekewap_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20180501223905"
+      }
+    },
+    "dlc-modifiers": {}
+  },
+  "dutch1": {
+    "name": "Wilhelmina",
+    "nation": "Netherlands",
+    "portrait": "https://vignette.wikia.nocookie.net/civilization/images/4/44/Wilhelmina_%28Civ6%29.png/revision/latest?cb=20180522204054",
+    "flag": "",
+    "wiki": "https://civilization.fandom.com/wiki/Wilhelmina_(Civ6)",
+    "leader-description": {
+      "Bonus - Radio Oranje": "Domestic Trade Routes provide +1 Loyalty per turn for the starting city. Trade Routes sent to or received from a foreign civilization grant +1 Culture to the Netherlands.",
+      "AI Agenda - Billionaire": "Tries to have as many Trade Routes as possible, and likes civilizations that trade with her cities. Dislikes those who refrain from sending Trade Routes to her cities.",
+      "AI Religion": {
+        "description": "Protestantism",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/d/db/Protestantism_Icon_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200322155028"
+      }
+    },
+    "civ-description": {
+      "Civ Ability - Grote Rivieren": "Rivers provide a +2 adjacency bonus for Campus, Theater Square, and Industrial Zone districts. Building a Harbor triggers a Culture Bomb, claiming surrounding tiles.",
+      "Unique Unit": {
+        "description": "De Zeven Provinciën (Naval Ranged - Renaissance Era) - Replaces Frigate",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/0/0b/De_Zeven_Provinci%C3%ABn_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200422044007"
+      },
+      "Unique Tile Improvement": {
+        "description": "Polder",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/f/fd/Polder_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20180501223657"
+      }
+    },
+    "dlc-modifiers": {
+      "GS Civ Ability": "Rivers provide a +2 adjacency bonus for Campus, Theater Square, and Industrial Zone districts. Building a Harbor triggers a Culture Bomb, claiming surrounding tiles. +50% Production towards the Dam district and Flood Barrier building."
+    }
+  },
+  "georgia1": {
+    "name": "Tamar",
+    "nation": "Georgia",
+    "portrait": "https://vignette.wikia.nocookie.net/civilization/images/b/b0/Tamar_%28Civ6%29.png/revision/latest?cb=20180707181802",
+    "flag": "",
+    "wiki": "https://civilization.fandom.com/wiki/Tamar_(Civ6)",
+    "leader-description": {
+      "Bonus - Glory of the World, Kingdom and Faith": "+100% Faith for the next 10 turns after declaring a Protectorate War. Each Envoy sent to a city-state of Georgia's majority Religion counts as two Envoys.",
+      "AI Agenda - Narikala Fortress": "Builds high-level walls around her cities and likes those who do the same. Dislikes civilizations that don't fortify their cities.",
+      "AI Religion": {
+        "description": "Eastern Orthodoxy",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/5/51/Eastern_Orthodoxy_Icon_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200322155026"
+      }
+    },
+    "civ-description": {
+      "Civ ability - Strength in Unity": "Dedications chosen at the beginning of a Golden Age or Heroic Age also grant their Normal Age bonuses towards improving Era Score, in addition to their regular bonuses. +50% Production towards walls.",
+      "Unique Unit": {
+        "description": "Khevsur (Melee - Medieval Era)",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/6/6a/Khevsur_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200422044103"
+      },
+      "Unique Building": {
+        "description": "Tsikhe (City Center) - Replaces Renaissance Walls",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/5/5e/Tsikhe_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20180411171131"
+      }
+    },
+    "dlc-modifiers": {}
+  },
+  "india2": {
+    "name": "Chandragupta",
+    "nation": "India",
+    "portrait": "https://vignette.wikia.nocookie.net/civilization/images/e/e2/Chandragupta_%28Civ6%29.png/revision/latest?cb=20190710113442",
+    "flag": "",
+    "wiki": "https://civilization.fandom.com/wiki/Chandragupta_(Civ6)",
+    "leader-description": {
+      "Bonus - Arthashastra": "Can declare a War of Territorial Expansion with Military Training, instead of Mobilization. +2 Movement and +5 Combat Strength for all units for the next 10 turns after declaring a War of Territorial Expansion.",
+      "AI Agenda - Maurya Empire": "Dislikes civilizations that have cities close to his borders, and will try to conquer them. Likes civilizations that are not his neighbors.",
+      "AI Religion": {
+        "description": "Hinduism",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/4/4f/Hinduism_Icon_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200322155026"
+      }
+    },
+    "civ-description": {
+      "Civ ability - Dharma": "Indian cities receive the Follower Beliefs of all religions with at least one follower in them, not just the majority religion.",
+      "Unique Unit": {
+        "description": "Varu (Heavy Cavalry - Classical Era) - Replaces Horseman",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/3/39/Varu_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20161127203659"
+      },
+      "Unique Tile Improvement": {
+        "description": "Stepwell",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/9/9e/Stepwell_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20190812200601"
+      }
+    },
+    "dlc-modifiers": {
+      "GS Civ Ability": "Indian cities receive the Follower Beliefs of all religions with at least one follower in them, not just the majority religion, and gain +1 Amenity for each religion with at least one follower in them. +2 Spread Religion charges for Missionaries. +100% Religious pressure from Indian Trade Routes."
+    }
+  },
+  "korea1": {
+    "name": "Seondeok",
+    "nation": "Korea",
+    "portrait": "https://vignette.wikia.nocookie.net/civilization/images/9/9c/Seondeok_%28Civ6%29.png/revision/latest?cb=20180215141306",
+    "flag": "",
+    "wiki": "https://civilization.fandom.com/wiki/Seondeok_(Civ6)",
+    "leader-description": {
+      "Bonus - Hwarang": "Cities with an established Governor receive +3% Culture and +3% Science for each promotion that Governor has.",
+      "Ai Agenda - Cheomseongdae": "Tries to build up Science, and likes those that also focus on Science. Dislikes civilizations with a weak Science output.",
+      "AI Religion": {
+        "description": "Buddhism",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/0/01/Buddhism_Icon_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200322155024"
+      }
+    },
+    "civ-description": {
+      "Civ ability - Three Kingdoms": "If adjacent to a Seowon, Farms receive +1 Civ6Food Food and Mines receive +1 Civ6Science Science.",
+      "Unique Unit": {
+        "description": "Hwacha (Ranged - Renaissance Era) - Replaces Field Cannon",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/e/e7/Hwacha_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200422044038"
+      },
+      "Unique District": {
+        "description": "Seowon - Replaces Campus",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/1/19/Seowon_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20190309225958"
+      }
+    },
+    "dlc-modifiers": {}
+  },
+  "mapuche1": {
+    "name": "Lautaro",
+    "nation": "Mapuche",
+    "portrait": "https://vignette.wikia.nocookie.net/civilization/images/e/e0/Lautaro_%28Civ6%29.png/revision/latest?cb=20180312165146",
+    "flag": "",
+    "wiki": "https://civilization.fandom.com/wiki/Lautaro_(Civ6)",
+    "leader-description": {
+      "Bonus - Swift Hawk": "Defeating an enemy unit within the borders of an enemy city causes that city to lose 20 Loyalty. Pillaging a tile within the borders of an enemy city causes that city to lose 5 Loyalty.",
+      "AI Agenda - Spirit of Tucapel": "Tries to keep his cities loyal, and dislikes civilizations who fail to do this. Likes civilizations who gain cities due to their Loyalty pressure."
+    },
+    "civ-description": {
+      "Civ ability - Toqui": "All units trained in cities with an established Governor gain +25% combat experience. +10 Combat Strength when fighting civilizations that are in a Golden or Heroic Age.",
+      "Unique Unit": {
+        "description": "Malón Raider (Light Cavalry - Renaissance Era)",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/6/65/Mal%C3%B3n_Raider_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200422044430"
+      },
+      "Unique Tile Improvement": {
+        "description": "Chemamull",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/d/de/Chemamull_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20180501224243"
+      }
+    },
+    "dlc-modifiers": {}
+  },
+  "mongolia1": {
+    "name": "Genghis Khan",
+    "nation": "Mongolia",
+    "portrait": "https://vignette.wikia.nocookie.net/civilization/images/5/53/Genghis_Khan_%28Civ6%29.png/revision/latest?cb=20180702224451",
+    "flag": "",
+    "wiki": "https://civilization.fandom.com/wiki/Genghis_Khan_(Civ6)",
+    "leader-description": {
+      "Bonus - Mongol Horde": "Cavalry class units gain +3 Combat Strength and have a chance to capture defeated cavalry class enemy units.",
+      "AI Agenda - Horse Lord": "Builds a strong cavalry force, and likes civilizations that don't compete in cavalry. Dislikes those who rival him in cavalry strength."
+    },
+    "civ-description": {
+      "Civ Ability - Örtöö": "Sending a Trade Route immediately creates a Trading Post in the destination city, instead of when the Trade Route is completed. Gains an extra level of Diplomatic Visibility with civilizations that have a Mongolian Trading Post. +6 Combat Strength for all units for each level of Diplomatic Visibility Mongolia has over the other civilization, instead of the usual +3.",
+      "Unique Unit": {
+        "description": "Keshig (Ranged Cavalry - Medieval Era)",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/8/88/Keshig_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200422044054"
+      },
+      "Unique Building": {
+        "description": "Ordu (Encampment) - Replaces Stable",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/2/2c/Ordu_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20180411170533"
+      }
+    },
+    "dlc-modifiers": {}
+  },
+  "scotland1": {
+    "name": "Robert the Bruce",
+    "nation": "Scotland",
+    "portrait": "https://vignette.wikia.nocookie.net/civilization/images/c/c4/Robert_the_Bruce_%28Civ6%29.png/revision/latest?cb=20180305152044",
+    "flag": "",
+    "wiki": "https://civilization.fandom.com/wiki/Robert_the_Bruce_(Civ6)",
+    "leader-description": {
+      "Bonus - Bannockburn": "Can declare a War of Liberation with Defensive Tactics, instead of Diplomatic Service. +100% Production in all cities and +2 Movement for all units for the next 10 turns after declaring a War of Liberation.",
+      "AI Agenda - Flower of Scotland": "Will never attack his neighboring civilizations unless they break a promise to him, and dislikes anyone waging war on them. Likes civilizations not at war with their neighbors.",
+      "AI Religion": {
+        "description": "Catholicism",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/b/b1/Catholicism_Icon_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200322155025"
+      }
+    },
+    "civ-description": {
+      "Civ ability - Scottish Enlightenment": "Happy cities gain +5% Science and +5% Production, and generate +1 Great Scientist points in their Campuses and +1 Great Engineer points in their Industrial Zones. Ecstatic cities double these bonuses.",
+      "Unique Unit": {
+        "description": "Highlander (Recon - Industrial Era) - Replaces Ranger",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/5/5d/Highlander_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200422044026"
+      },
+      "Unique Tile Improvement": {
+        "description": "Golf Course",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/e/ed/Golf_Course_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20180501224042"
+      }
+    },
+    "dlc-modifiers": {}
+  },
+  "zulu1": {
+    "name": "Shaka",
+    "nation": "Zulu",
+    "portrait": "https://vignette.wikia.nocookie.net/civilization/images/e/eb/Shaka_%28Civ6%29.png/revision/latest?cb=20180513132001",
+    "flag": "",
+    "wiki": "https://civilization.fandom.com/wiki/Shaka_(Civ6)",
+    "leader-description": {
+      "Bonus - Amabutho": "May form Corps with Mercenaries, instead of Nationalism, and Armies with Nationalism, instead of Mobilization. Corps and Armies gain an additional +5 Combat Strength.",
+      "AI Agenda - Horn, Chest, Loins": "Forms as many Corps and Armies as possible, and likes those who do the same. Dislikes civilizations with few Corps and Armies."
+    },
+    "civ-description": {
+      "Civ ability - Isibongo": "Capturing a city will upgrade the conquering unit into a Corps or Army, if the necessary civics are unlocked. +3 Loyalty per turn to cities with a garrisoned unit, increasing to +5 if the garrisoned unit is a Corps or Army.",
+      "Unique Unit": {
+        "description": "Impi (Anti-Cavalry - Medieval Era) - Replaces Pikeman",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/6/6d/Impi_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200422044044"
+      },
+      "Unique Building": {
+        "description": "Ikanda - Replaces Encampment",
+        "image": "https://vignette.wikia.nocookie.net/civilization/images/8/8e/Ikanda_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20180219222636"
+      }
+    },
+    "dlc-modifiers": {}
   }
 }
