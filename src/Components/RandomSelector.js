@@ -55,7 +55,6 @@ function RandomSelector(props) {
     return parsedCivByLongName;
   }, []);
 
-  // https://github.com/facebookexperimental/Recoil/issues/477
   const remainingCivs = useMemo(() => {
     return allCivsByName.filter(
       (elem) => !(playerCivs.has(elem) || bannedCivs.has(elem))

@@ -62,11 +62,6 @@ function AboutMe() {
                       className="clickable-image-wrapper"
                     >
                       {socialLinks[elem].component}
-                      {/* <img
-                        src={socialLinks[elem].image}
-                        alt=""
-                        className="clickable-image"
-                      /> */}
                     </a>
                     <div className="clickable-description">
                       <a
@@ -95,9 +90,6 @@ function AboutMe() {
               })}
             </div>
           </div>
-          {/* <div className="attributions-section">
-            <h1 style={{ fontSize: "3rem", margin: "0" }}>Attributions</h1>
-          </div> */}
         </div>
       </Modal>
     </div>
