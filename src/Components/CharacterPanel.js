@@ -1,125 +1,27 @@
-import React from "react";
+import React, { useContext } from "react";
+import { useObserver } from "mobx-react";
 import Modal from "react-modal";
+import { StoreContext } from "../Store";
 import { useWindowDimensions } from "../hooks";
+import { generateCivDescription } from "../util/generateCivDescription";
 
 Modal.setAppElement("#root");
-function CharacterPanel(props) {
-  const selectedInfo = props.selectedCivInfo;
-  const [playerCivs, setPlayerCivs] = [props.playerCivs, props.setPlayerCivs];
-  const [bannedCivs, setBannedCivs] = [props.bannedCivs, props.setBannedCivs];
-  //handle
-  const [modalIsOpen, setIsOpen] = [props.modalState, props.setModalState];
+function CharacterPanel() {
+  const store = useContext(StoreContext);
+  // console.log(store);
 
   //handle to make it easier to read
-  const closeModal = () => setIsOpen(false);
+  const closeModal = () => {
+    store.characterModalState = false;
+  };
 
   //updates with windowDimensions
   // eslint-disable-next-line
   const [windowWidth, windowHeight] = useWindowDimensions();
 
-  const banSeletedCiv = () => {
-    setBannedCivs((bans) => {
-      const new_bans = new Set(bans);
-      new_bans.add(`${selectedInfo.name} of ${selectedInfo.nation}`);
-      return new_bans;
-    });
-    closeModal();
-  };
-
-  const unbanSelectedCiv = () => {
-    setBannedCivs((bans) => {
-      const new_bans = new Set(bans);
-      new_bans.delete(`${selectedInfo.name} of ${selectedInfo.nation}`);
-      return new_bans;
-    });
-  };
-
-  const playerSelectCiv = () => {
-    setPlayerCivs((playerSelectedCivs) => {
-      const new_playerCivs = new Set(playerSelectedCivs);
-      new_playerCivs.add(`${selectedInfo.name} of ${selectedInfo.nation}`);
-      return new_playerCivs;
-    });
-    closeModal();
-  };
-
-  const playerUnselectCiv = () => {
-    setPlayerCivs((playerSelectedCivs) => {
-      const new_playerCivs = new Set(playerSelectedCivs);
-      new_playerCivs.delete(`${selectedInfo.name} of ${selectedInfo.nation}`);
-      return new_playerCivs;
-    });
-  };
-
-  const getSelectedCivDescription = () => {
-    const isEmptyObject = (obj) => {
-      return (
-        typeof obj === "object" &&
-        Object.keys(obj).length === 0 &&
-        obj.constructor === Object
-      );
-    };
-
-    let fullDescription = [];
-
-    const genDescriptionByKey = (key) => {
-      const key_desc = [];
-      if (isEmptyObject(selectedInfo)) return [];
-
-      if (!isEmptyObject(selectedInfo[key])) {
-        Object.keys(selectedInfo[key]).forEach((param, index) => {
-          key_desc.push(
-            <li
-              key={`${selectedInfo.nation}-${selectedInfo.leader}-${key}-${index}`}
-              className="description-li"
-            >
-              <strong>{param}: </strong>
-              <span className="modal-description-span">
-                {typeof selectedInfo[key][param] === "object" && (
-                  <img
-                    src={selectedInfo[key][param].image}
-                    alt=""
-                    className="description-icon"
-                  />
-                )}
-                {typeof selectedInfo[key][param] === "object"
-                  ? selectedInfo[key][param].description
-                  : selectedInfo[key][param]}
-              </span>
-            </li>
-          );
-        });
-      }
-      return key_desc;
-    };
-
-    fullDescription.push(
-      <div key={`leader-features`}>
-        <h3>Leader Features and Abilities</h3>
-        <ul>{genDescriptionByKey("leader-description")}</ul>
-      </div>,
-      <div key={`civilization-features`}>
-        <h3>Civilization Features and Abilities</h3>
-        <ul>{genDescriptionByKey("civ-description")}</ul>
-      </div>
-    );
-
-    const dlc_modifiers = genDescriptionByKey("dlc-modifiers");
-    if (dlc_modifiers.length !== 0) {
-      fullDescription.push(
-        <div key="dlc_modifiers">
-          <h3>DLC Modifiers</h3>
-          <ul>{dlc_modifiers}</ul>
-        </div>
-      );
-    }
-
-    return fullDescription;
-  };
-
-  return (
+  return useObserver(() => (
     <Modal
-      isOpen={modalIsOpen}
+      isOpen={store.characterModalState}
       onRequestClose={closeModal}
       closeTimeoutMS={300}
       style={{
@@ -147,25 +49,20 @@ function CharacterPanel(props) {
         <div className="modal-portrait">
           <div className="portrait-icon">
             <img
-              src={selectedInfo.portrait}
+              src={store.selectedCiv.portrait}
               alt=""
               className={`modal-selected-portrait ${
-                bannedCivs.has(
-                  `${selectedInfo.name} of ${selectedInfo.nation}`
-                ) ||
-                playerCivs.has(`${selectedInfo.name} of ${selectedInfo.nation}`)
-                  ? "grayscale"
-                  : ""
+                store.selectedCivStatus ? "grayscale" : ""
               }`}
             />
             <img
-              src={selectedInfo.flag}
+              src={store.selectedCiv.flag}
               alt=""
               className="modal-selected-flag"
             />
           </div>
           <a
-            href={selectedInfo.wiki}
+            href={store.selectedCiv.wiki}
             target="_blank"
             rel="noopener noreferrer"
             className="modal-wiki-link"
@@ -179,44 +76,42 @@ function CharacterPanel(props) {
           </a>
           <button
             className="modal-button ban-button"
-            onClick={
-              bannedCivs.has(`${selectedInfo.name} of ${selectedInfo.nation}`)
-                ? unbanSelectedCiv
-                : banSeletedCiv
-            }
-            disabled={playerCivs.has(
-              `${selectedInfo.name} of ${selectedInfo.nation}`
-            )}
+            onClick={() => {
+              if (store.selectedCiv.status === "banned") {
+                store.civs[store.selectedCivId].status = null;
+              } else {
+                store.civs[store.selectedCivId].status = "banned";
+                closeModal();
+              }
+            }}
+            disabled={!["banned", null].includes(store.selectedCiv.status)}
           >
-            {bannedCivs.has(`${selectedInfo.name} of ${selectedInfo.nation}`)
-              ? "Unban"
-              : "Ban"}
+            {store.selectedCiv.status === "banned" ? "Unban" : "Ban"}
           </button>
           <button
             className="modal-button select-button"
-            onClick={
-              playerCivs.has(`${selectedInfo.name} of ${selectedInfo.nation}`)
-                ? playerUnselectCiv
-                : playerSelectCiv
-            }
-            disabled={bannedCivs.has(
-              `${selectedInfo.name} of ${selectedInfo.nation}`
-            )}
+            onClick={() => {
+              if (store.selectedCiv.status === "player") {
+                store.civs[store.selectedCivId].status = null;
+              } else {
+                store.civs[store.selectedCivId].status = "player";
+                closeModal();
+              }
+            }}
+            disabled={!["player", null].includes(store.selectedCiv.status)}
           >
-            {playerCivs.has(`${selectedInfo.name} of ${selectedInfo.nation}`)
-              ? "Deselect"
-              : "Select"}
+            {store.selectedCiv.status === "player" ? "Deselect" : "Select"}
           </button>
         </div>
         <div className="modal-description">
-          <h1 className="modal-title">{`${selectedInfo.name} of ${selectedInfo.nation}`}</h1>
+          <h1 className="modal-title">{`${store.selectedCiv.leader} of ${store.selectedCiv.name}`}</h1>
           <div className="modal-description-box">
-            {getSelectedCivDescription()}
+            {generateCivDescription(store.selectedCiv)}
           </div>
         </div>
       </div>
     </Modal>
-  );
+  ));
 }
 
 export default CharacterPanel;

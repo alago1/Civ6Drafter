@@ -1,10 +1,11 @@
-import React, { useState, useMemo } from "react";
-import civs from "../civilizations.json";
+import React, { useState, useContext } from "react";
+import { useObserver } from "mobx-react";
 import Modal from "react-modal";
+import { StoreContext } from "../Store";
+import DraftResultCard from "./DraftResultCard";
 
-function RandomSelector(props) {
-  const playerCivs = props.playerCivs;
-  const bannedCivs = props.bannedCivs;
+function RandomSelector() {
+  const store = useContext(StoreContext);
 
   const [selectedPlayers, setSelectedPlayers] = useState(""); //string with names of players for selected civs (one name per line)
   const [draftedPlayers, setDraftedPlayers] = useState(""); //string with names of players participating in the draft (one name per line)
@@ -19,47 +20,12 @@ function RandomSelector(props) {
   //handler that updates state variables before closing modal
   const closeModal = () => {
     setIsOpen(false);
-    if (!modalShowResults && playerCivs.size !== 0)
+    if (!modalShowResults && store.playerCivs.length !== 0)
       setSelectedPlayers(document.getElementById("selected-names").value);
-    if (!modalShowResults && remainingCivs.length !== 0)
+    if (!modalShowResults && store.remainingCivs.length !== 0)
       setDraftedPlayers(document.getElementById("draft-names").value);
     setShowResults(false);
   };
-
-  const allCivsByName = useMemo(() => {
-    return Object.keys(civs)
-      .filter((elem) => elem !== "default")
-      .map((elem) => `${civs[elem].name} of ${civs[elem].nation}`);
-  }, []);
-
-  const civsByLongName = useMemo(() => {
-    const parseCivInfo = (civ) => {
-      let civInfo = civ;
-      for (let param of Object.keys(civInfo)) {
-        if (civInfo[param] === "") {
-          civInfo[param] = civs.default[param];
-        }
-      }
-      return civInfo;
-    };
-
-    let parsedCivByLongName = {};
-    Object.keys(civs)
-      .filter((elem) => elem !== "default")
-      .forEach(
-        (elem) =>
-          (parsedCivByLongName[
-            `${civs[elem].name} of ${civs[elem].nation}`
-          ] = parseCivInfo(civs[elem]))
-      );
-    return parsedCivByLongName;
-  }, []);
-
-  const remainingCivs = useMemo(() => {
-    return allCivsByName.filter(
-      (elem) => !(playerCivs.has(elem) || bannedCivs.has(elem))
-    );
-  }, [allCivsByName, playerCivs, bannedCivs]);
 
   const sample = (population, k) => {
     //Given a population (array) and k (number <= population.length)
@@ -115,7 +81,7 @@ function RandomSelector(props) {
     }
     draftText = draftText.split("\n").filter((elem) => elem !== "");
 
-    if (playerCivs.size !== 0) {
+    if (store.playerCivs.length !== 0) {
       let selectedText;
       if (!useStoredNames) {
         selectedText = document.getElementById("selected-names").value;
@@ -124,12 +90,15 @@ function RandomSelector(props) {
       }
       selectedText = selectedText.split("\n").filter((elem) => elem !== "");
 
-      if (selectedText.length !== playerCivs.size) {
+      if (selectedText.length !== store.playerCivs.length) {
         let selectedSet = new Set(selectedText);
         let draftSet = new Set(draftText);
         let i = 1;
         let to_be_added = new Set();
-        while (selectedText.length + to_be_added.size < playerCivs.size) {
+        while (
+          selectedText.length + to_be_added.size <
+          store.playerCivs.length
+        ) {
           if (
             !(
               selectedSet.has(`UnnamedPlayer${i}`) ||
@@ -145,13 +114,13 @@ function RandomSelector(props) {
       }
       if (!useStoredNames) setSelectedPlayers(selectedText.join("\n"));
 
-      const selectedCivsInterator = playerCivs.values();
+      const selectedCivsInterator = store.playerCivs;
 
       draftCompleteResults = draftCompleteResults.concat(
-        selectedText.map((elem) => {
+        selectedText.map((elem, index) => {
           return {
             player: elem,
-            civilization: selectedCivsInterator.next().value,
+            civilization: selectedCivsInterator[index],
           };
         })
       );
@@ -160,9 +129,12 @@ function RandomSelector(props) {
       // console.log(fullSetup)
     }
 
-    let maxNumberOfDrafts = Math.min(draftText.length, remainingCivs.length);
+    let maxNumberOfDrafts = Math.min(
+      draftText.length,
+      store.remainingCivs.length
+    );
 
-    let draft = sample(remainingCivs, maxNumberOfDrafts);
+    let draft = sample(store.remainingCivs, maxNumberOfDrafts);
     draftCompleteResults = draftCompleteResults.concat(
       draftText.slice(0, maxNumberOfDrafts).map((elem, index) => {
         return {
@@ -175,19 +147,11 @@ function RandomSelector(props) {
     //Simple report to console
     console.log(draftCompleteResults);
 
-    draftCompleteResults = draftCompleteResults.map((elem) => {
-      let civInfo = civsByLongName[elem.civilization];
-      return {
-        player: elem.player,
-        ...civInfo,
-      };
-    });
-    // console.log(fullSetup);
     setDraftResults(draftCompleteResults);
     setShowResults(true);
   };
 
-  return (
+  return useObserver(() => (
     <div>
       <button
         onClick={() => setIsOpen(true)}
@@ -226,7 +190,7 @@ function RandomSelector(props) {
             <h1 style={{ fontSize: "3rem", margin: "0" }}>
               Random Draft Setup
             </h1>
-            {playerCivs.size !== 0 && (
+            {store.playerCivs.length !== 0 && (
               <div className="random-draft-selected-civs">
                 <h2 style={{ marginBottom: "5px" }}>Selected Civilizations</h2>
                 <h3 style={{ margin: "0px", marginLeft: "10px" }}>
@@ -246,13 +210,13 @@ function RandomSelector(props) {
                     fontSize: "1.25rem",
                   }}
                 >
-                  {Array.from(playerCivs.values()).join(", ")}
+                  {store.playerCivs.join(", ")}
                 </h3>
                 <textarea
                   id="selected-names"
                   name="selected-names"
                   cols="1"
-                  rows={Math.min(6, playerCivs.size)}
+                  rows={Math.min(6, store.playerCivs.length)}
                   className="selected-names"
                   defaultValue={selectedPlayers}
                 />
@@ -269,7 +233,7 @@ function RandomSelector(props) {
                 id="draft-names"
                 name="draft-names"
                 cols="1"
-                rows={Math.min(6, remainingCivs.length)}
+                rows={Math.min(6, store.remainingCivs.length)}
                 className="selected-names"
                 defaultValue={draftedPlayers}
               />
@@ -290,29 +254,11 @@ function RandomSelector(props) {
             <div className="random-draft-cards-list">
               {draftResults.map((draftRes) => {
                 return (
-                  <div
-                    className="random-draft-card-result"
-                    key={`${draftRes.name}-draft-result-card`}
-                  >
-                    <div className="draft-results-portrait">
-                      <img
-                        src={draftRes.portrait}
-                        alt=""
-                        className="modal-selected-portrait"
-                      />
-                      <img
-                        src={draftRes.flag}
-                        alt=""
-                        className="modal-selected-flag"
-                      />
-                    </div>
-                    <div className="card-text-wrapper">
-                      <h1 className="card-text">{draftRes.player} as</h1>
-                      <h2 className="card-text">
-                        {draftRes.name} of {draftRes.nation}
-                      </h2>
-                    </div>
-                  </div>
+                  <DraftResultCard
+                    className="random-draft-result-card"
+                    player={draftRes.player}
+                    civilization={draftRes.civilization}
+                  />
                 );
               })}
               <button
@@ -326,7 +272,7 @@ function RandomSelector(props) {
         )}
       </Modal>
     </div>
-  );
+  ));
 }
 
 export default RandomSelector;

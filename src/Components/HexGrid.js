@@ -1,65 +1,9 @@
 import React, { Fragment } from "react";
-import Hexagon from "react-hexagon";
+import { GenerateHexGridList } from "../util/HexGridList";
 import { useWindowDimensions } from "../hooks";
-import civs from "../civilizations.json";
 
-function HexGrid(props) {
-  //setter only
-  const setIsOpen = props.setModalState;
-  const setSelectedInfo = props.setSelectedCivInfo;
-
-  //value only
-  const playerCivs = props.playerCivs;
-  const bannedCivs = props.bannedCivs;
-
-  const parseCivInfo = (civ) => {
-    let civInfo = civ;
-    for (let param of Object.keys(civInfo)) {
-      if (civInfo[param] === "") {
-        civInfo[param] = civs.default[param];
-      }
-    }
-    return civInfo;
-  };
-
-  const hexGrid = Object.keys(civs)
-    .filter((elem) => elem !== "default")
-    .map((elem, index) => {
-      let civInfo = parseCivInfo(civs[elem]);
-      return (
-        <div className="hex" key={`hexagon-div-${civs[elem].name}`}>
-          <img
-            src={civInfo.flag}
-            alt=""
-            className="hex-flag"
-            onClick={() => openModal(civInfo)}
-          />
-          <span
-            className="checkmark-symbol"
-            style={{
-              visibility: playerCivs.has(`${civInfo.name} of ${civInfo.nation}`)
-                ? "visible"
-                : "hidden",
-            }}
-            onClick={() => openModal(civInfo)}
-          >
-            &#10004;
-          </span>
-          <Hexagon
-            key={`hexagon-${index}`}
-            backgroundImage={civInfo.portrait}
-            backgroundScale={1.03}
-            className={
-              bannedCivs.has(`${civInfo.name} of ${civInfo.nation}`) ||
-              playerCivs.has(`${civInfo.name} of ${civInfo.nation}`)
-                ? "grayscale"
-                : ""
-            }
-            onClick={() => openModal(civInfo)}
-          />
-        </div>
-      );
-    });
+function HexGrid() {
+  const hexGrid = GenerateHexGridList();
 
   //grid setup
   // eslint-disable-next-line
@@ -84,29 +28,30 @@ function HexGrid(props) {
   const cells_per_row = getCellsPerRow();
   const n_rows = Math.ceil(hexGrid.length / cells_per_row) + 1; //minimun number of rows given cells_per_row
 
-  const openModal = (new_selection_info) => {
-    setIsOpen(true);
-    setSelectedInfo(parseCivInfo(new_selection_info));
-  };
-
   return (
     <div className="hex-grid">
       {[...Array(n_rows).keys()].map((row_index) => {
+        //number of hex cells already plotted
         let cells_passed =
           row_index % 2 === 0
             ? (2 * cells_per_row - 1) * Math.floor(row_index / 2)
             : (2 * cells_per_row - 1) * Math.floor((row_index - 1) / 2) +
               cells_per_row -
               1;
-        let n_cells_this_row =
-          row_index % 2 ? cells_per_row : cells_per_row - 1;
 
-        // console.log(`row-${row_index}: ${n_cells_this_row}`);
-        // console.log(
-        //   hexGrid.slice(cells_passed, cells_passed + n_cells_this_row)
-        // );
+        //number of cells in row to be plotted
+        let n_cells_this_row =
+          row_index % 2 === 1 ? cells_per_row : cells_per_row - 1;
+
+        let shouldCorrectMargin =
+          hexGrid.length - cells_passed - n_cells_this_row <= 0 && //checks if its the last row
+          (n_cells_this_row + 1) % 2 === (hexGrid.length - cells_passed) % 2; //if its the last row, checks if number of remaining cells has equal parity to previous row
+
         return (
-          <div className="row" key={row_index}>
+          <div
+            className={`row ${shouldCorrectMargin ? "shift-last-row" : ""}`}
+            key={row_index}
+          >
             {[...Array(n_cells_this_row).keys()].map((col_index) => {
               return (
                 <Fragment key={`${row_index}-${col_index}`}>
