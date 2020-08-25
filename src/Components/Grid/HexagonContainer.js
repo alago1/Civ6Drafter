@@ -29,4 +29,5 @@ function HexagonContainer(props) {
   );
 }
 
+// export default React.memo(HexagonContainer);
 export default HexagonContainer;

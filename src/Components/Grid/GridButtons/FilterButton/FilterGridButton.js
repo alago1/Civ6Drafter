@@ -27,7 +27,7 @@ function FilterGridButton() {
     filters.current.has(value)
       ? filters.current.delete(value)
       : filters.current.add(value);
-    console.log(filters.current);
+    // console.log(filters.current);
   };
 
   const closeModal = () => {

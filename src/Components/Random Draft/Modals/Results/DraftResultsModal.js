@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
-import { StoreContext } from "../../../Store";
+import { StoreContext } from "../../../../Store";
 import { useObserver } from "mobx-react";
-import DraftResultCard from "../DraftResultCard";
+import DraftResultCard from "./DraftResultCard";
 
 function DraftResultsModal(props) {
   const store = useContext(StoreContext);
@@ -21,7 +21,7 @@ function DraftResultsModal(props) {
           );
         })}
         <button
-          onClick={() => store.runDraft(true)}
+          onClick={store.runDraft}
           className="modal-button run-draft-button"
         >
           Reroll

@@ -2,8 +2,8 @@ import React, { useState, useContext } from "react";
 import { useObserver } from "mobx-react";
 import PageModal from "../PageModal";
 import { StoreContext } from "../../Store";
-import DraftSetupModal from "./Modals/DraftSetupModal";
-import DraftResultsModal from "./Modals/DraftResultsModal";
+import DraftSetupModal from "./Modals/Setup/DraftSetupModal";
+import DraftResultsModal from "./Modals/Results/DraftResultsModal";
 
 function RandomSelector() {
   const store = useContext(StoreContext);
@@ -14,12 +14,6 @@ function RandomSelector() {
   //handler that updates state variables before closing modal
   const closeModal = () => {
     setIsOpen(false);
-    if (!store.draftModalState) {
-      if (store.playerCivs.length !== 0)
-        store.selectedPlayers = document.getElementById("selected-names").value;
-      if (store.remainingCivs.length !== 0)
-        store.draftedPlayers = document.getElementById("draft-names").value;
-    }
     store.draftModalState = false;
   };
 
@@ -29,6 +23,9 @@ function RandomSelector() {
         onClick={() => setIsOpen(true)}
         className="modal-button random-draft-button"
         style={{ width: "200px" }}
+        disabled={
+          store.playerCivs.length === 0 && store.remainingCivs.length === 0
+        }
       >
         Random Draft
       </button>

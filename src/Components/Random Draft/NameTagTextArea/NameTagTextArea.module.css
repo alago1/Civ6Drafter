@@ -1,0 +1,33 @@
+.name-tag-text-area-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+
+  min-height: 35px;
+  width: calc(100% - 40px);
+  margin: 0px 20px;
+
+  border-bottom: 1px solid white;
+  border-radius: 5px 5px 5px 0px;
+}
+
+.name-tag-text-area-container:hover {
+  cursor: text;
+}
+
+.name-tag-text-area {
+  display: block;
+  width: 100%;
+  height: auto;
+  font-size: 1.3rem;
+
+  color: black;
+
+  margin-top: 10px;
+
+  border: none;
+  resize: none;
+  outline: none;
+  background: transparent;
+}

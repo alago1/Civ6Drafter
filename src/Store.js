@@ -12,9 +12,6 @@ const computedCivs = computeCivs();
 
 export const StoreProvider = ({ children }) => {
   const store = useLocalStore(() => ({
-    windowWidth: 0,
-    windowHeight: 0,
-
     selectedCivId: "america1", //starts with america to avoid some edge cases
 
     civs: computedCivs,
@@ -24,10 +21,25 @@ export const StoreProvider = ({ children }) => {
       for (let param of Object.keys(computedCivs)) {
         if (filters.includes(computedCivs[param]["dlc-status"])) {
           filtered_civs[param] = computedCivs[param];
+          if (store.civs?.[param]?.status === "banned") {
+            filtered_civs[param].status = "banned";
+          }
         }
       }
-      console.log(filtered_civs);
+
+      const numberOfCivs = Object.keys(filtered_civs).length;
+
       store.civs = filtered_civs;
+      if (store.draftedPlayers.size > numberOfCivs) {
+        store.draftedPlayers = new Set(
+          Array.from(store.draftedPlayers).slice(0, numberOfCivs)
+        );
+      }
+      if (store.selectedPlayers.size > numberOfCivs) {
+        store.selectedPlayers = new Set(
+          Array.from(store.selectedPlayers).slize(0, numberOfCivs)
+        );
+      }
     },
 
     get selectedCiv() {
@@ -56,53 +68,47 @@ export const StoreProvider = ({ children }) => {
     characterModalState: false, //wheter the characterPanel should be showing
 
     draftModalState: false, //wheter the results should be shown
-    draftedPlayers: "", //string with names of players participating in the draft (one name per line)
-    selectedPlayers: "", //string with names of players for selected civs (one name per line)
+
+    draftedPlayers: new Set(), //string with names of players participating in the draft (one name per line)
+
+    updateDraftedPlayers: (newPlayers) => {
+      store.draftedPlayers = newPlayers;
+    },
+
+    selectedPlayers: new Set(), //string with names of players for selected civs (one name per line)
+
+    updateSelectedPlayers: (newPlayers) => {
+      store.selectedPlayers = newPlayers;
+    },
+
     draftResults: [],
 
-    runDraft: (useStoredNames) => {
+    runDraft: async () => {
       let draftCompleteResults = [];
-      let draftText;
-      if (!useStoredNames) {
-        draftText = document.getElementById("draft-names").value;
-        store.draftedPlayers = draftText;
-      } else {
-        draftText = store.draftedPlayers;
-      }
-      draftText = draftText.split("\n").filter((elem) => elem !== "");
+      let draftText = Array.from(store.draftedPlayers);
 
       if (store.playerCivs.length !== 0) {
-        let selectedText;
-        if (!useStoredNames) {
-          selectedText = document.getElementById("selected-names").value;
-        } else {
-          selectedText = store.selectedPlayers;
-        }
-        selectedText = selectedText.split("\n").filter((elem) => elem !== "");
+        let selectedText = Array.from(store.selectedPlayers);
 
+        // if missing names from selected players - add placeholders
         if (selectedText.length !== store.playerCivs.length) {
-          let selectedSet = new Set(selectedText);
-          let draftSet = new Set(draftText);
           let i = 1;
-          let to_be_added = new Set();
+          let filler_names = new Set();
           while (
-            selectedText.length + to_be_added.size <
+            selectedText.length + filler_names.size !==
             store.playerCivs.length
           ) {
+            const potentialName = `UnnamedPlayer${i}`;
+            //assert that this name does not conflict with those inputted by the user
             if (
-              !(
-                selectedSet.has(`UnnamedPlayer${i}`) ||
-                draftSet.has(`UnnamedPlayer${i}`)
-              )
-            ) {
-              to_be_added.add(`UnnamedPlayer${i}`);
-            } else {
-              i++;
-            }
+              !store.selectedPlayers.has(potentialName) &&
+              !store.draftedPlayers.has(potentialName)
+            )
+              filler_names.add(potentialName);
+            i++;
           }
-          selectedText = selectedText.concat(Array.from(to_be_added.values()));
+          selectedText.push(Array.from(filler_names));
         }
-        if (!useStoredNames) store.selectedPlayers = selectedText.join("\n");
 
         draftCompleteResults = draftCompleteResults.concat(
           selectedText.map((elem, index) => {
@@ -117,14 +123,9 @@ export const StoreProvider = ({ children }) => {
         // console.log(fullSetup)
       }
 
-      let maxNumberOfDrafts = Math.min(
-        draftText.length,
-        store.remainingCivs.length
-      );
-
-      let draft = sample(store.remainingCivs, maxNumberOfDrafts);
+      let draft = sample(store.remainingCivs, draftText.length);
       draftCompleteResults = draftCompleteResults.concat(
-        draftText.slice(0, maxNumberOfDrafts).map((elem, index) => {
+        draftText.slice(0, draftText.length).map((elem, index) => {
           return {
             player: elem,
             civilization: toJS(draft[index]),
