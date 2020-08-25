@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { StoreContext } from "../Store";
 import { useObserver } from "mobx-react";
-import HexagonContainer from "../Components/HexagonContainer";
+import HexagonContainer from "../Components/Grid/HexagonContainer";
 
 export const GenerateHexGridList = () => {
   const store = useContext(StoreContext);

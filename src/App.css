@@ -84,7 +84,7 @@
   flex-direction: row-reverse;
 }
 
-.shift-last-row > * {
+.shift-last-row > .hex {
   transform: translateX(calc(-1 * var(--hexagon-unit-width) / 2 - 2px));
 }
 
@@ -97,7 +97,7 @@
 }
 
 .shift-last-row > .hex:hover {
-  transform: translateX(calc(var(--hexagon-unit-width) / -2 - 2px)) scale(1.08);
+  transform: translateX(calc(var(--hexagon-unit-width) / -2 - 2px)) scale(1.08) !important;
 }
 
 .ReactModal__Overlay {
@@ -296,6 +296,11 @@
 }
 
 .card-text {
+  margin: 0;
+}
+
+.modal-title-text {
+  font-size: 3rem;
   margin: 0;
 }
 

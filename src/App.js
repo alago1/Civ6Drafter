@@ -1,16 +1,15 @@
 import React from "react";
-import { StoreProvider } from "./Store";
-import AboutMe from "./Components/AboutMe";
+import AboutMe from "./Components/AboutMe/AboutMe";
 import AppContent from "./Components/AppContent";
+import Modal from "react-modal";
 import "./App.css";
 
+Modal.setAppElement("#root");
 function App() {
   return (
     <div className="App">
       <AboutMe />
-      <StoreProvider>
-        <AppContent />
-      </StoreProvider>
+      <AppContent />
     </div>
   );
 }

@@ -1,0 +1,34 @@
+.tag-container {
+  display: inline-flex;
+  flex-direction: row;
+
+  border: none;
+  border-radius: 30px;
+  padding: 0px 20px;
+  outline: none;
+  background: transparent;
+  transition: background-color 0.3s ease;
+
+  width: auto;
+  font-size: 25px;
+  color: white;
+  align-items: center;
+}
+
+.strike-text {
+  text-decoration: line-through;
+}
+
+.tag-container:hover,
+.tag-container:focus {
+  cursor: default;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.tag-input {
+  margin: 0px 10px;
+  border-radius: 10px;
+
+  width: 18px;
+  height: 18px;
+}

@@ -7,7 +7,8 @@
     "wiki": "https://civilization.fandom.com/wiki/Leaders_(Civ6)",
     "leader-description": {},
     "civ-description": {},
-    "dlc-modifiers": {}
+    "dlc-modifiers": {},
+    "dlc-status": "Vanilla"
   },
 
   "america1": {
@@ -42,7 +43,8 @@
     "dlc-modifiers": {
       "R&F Civ Ability": "All Diplomatic policy slots in the current government are converted to Wildcard slots.",
       "GS Civ Ability": "All Diplomatic policy slots in the current government are converted to Wildcard slots. +1 Diplomatic Favor per turn for each Wildcard slot in the current government."
-    }
+    },
+    "dlc-status": "Vanilla"
   },
   "arabia1": {
     "name": "Saladin",
@@ -69,7 +71,8 @@
         "image": "https://vignette.wikia.nocookie.net/civilization/images/c/c7/Madrasa_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20161027044322"
       }
     },
-    "dlc-modifiers": {}
+    "dlc-modifiers": {},
+    "dlc-status": "Vanilla"
   },
   "aztec1": {
     "name": "Montezuma",
@@ -92,7 +95,8 @@
         "image": "https://vignette.wikia.nocookie.net/civilization/images/6/61/Tlachtli_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20161027051819"
       }
     },
-    "dlc-modifiers": {}
+    "dlc-modifiers": {},
+    "dlc-status": "Vanilla"
   },
   "brazil1": {
     "name": "Pedro II",
@@ -124,7 +128,8 @@
         "description": "Copacabana - Replaces Water Park",
         "image": "https://vignette.wikia.nocookie.net/civilization/images/e/ed/Copacabana_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20180415213148"
       }
-    }
+    },
+    "dlc-status": "Vanilla"
   },
   "china1": {
     "name": "Qin Shi Huang",
@@ -153,7 +158,8 @@
     },
     "dlc-modifiers": {
       "GS Leader Bonus": "Builders receive an additional build charge. Can spend Builder charges to complete 15% of the Production cost for Ancient and Classical wonders. Unlocks Canals with Masonry instead of Steam Power."
-    }
+    },
+    "dlc-status": "Vanilla"
   },
   "egypt1": {
     "name": "Cleopatra",
@@ -187,7 +193,8 @@
         "description": "Maryannu Chariot Archer (Ranged Cavalry - Ancient Era)",
         "image": "https://vignette.wikia.nocookie.net/civilization/images/e/e3/Maryannu_Chariot_Archer_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20161127211710"
       }
-    }
+    },
+    "dlc-status": "Vanilla"
   },
   "england1": {
     "name": "Victoria",
@@ -221,7 +228,8 @@
     "dlc-modifiers": {
       "GS Leader Bonus": "The first city founded on each continent other than England's home continent grants a free melee unit in that city and +1 Trade Route capacity. Building a Royal Navy Dockyard grants a free naval unit in that city. Gain the Redcoat unique unit with Military Science.",
       "GS Civ Ability - Workshop of the World (Replaces British Museum)": "Iron and Coal Mines accumulate +2 resources per turn. +100% Production towards Military Engineers. Military Engineers receive +2 charges. Buildings that provide additional yields when powered receive +4 of their respective yields. +20% Production towards Industrial Zone buildings. Harbor buildings grant +10 Strategic Resource stockpiles."
-    }
+    },
+    "dlc-status": "Vanilla"
   },
   "france1": {
     "name": "Catherine de'Medici",
@@ -248,7 +256,8 @@
         "image": "https://vignette.wikia.nocookie.net/civilization/images/1/1f/Ch%C3%A2teau_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20161109234422"
       }
     },
-    "dlc-modifiers": {}
+    "dlc-modifiers": {},
+    "dlc-status": "Vanilla"
   },
   "germany1": {
     "name": "Frederick Barbosa",
@@ -275,7 +284,8 @@
         "image": "https://vignette.wikia.nocookie.net/civilization/images/b/b5/Hansa_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20180220014434"
       }
     },
-    "dlc-modifiers": {}
+    "dlc-modifiers": {},
+    "dlc-status": "Vanilla"
   },
   "greece1": {
     "name": "Gorgo",
@@ -300,7 +310,8 @@
     },
     "dlc-modifiers": {
       "GS AI Agenda": "Grievances against this leader decay at twice the usual rate."
-    }
+    },
+    "dlc-status": "Vanilla"
   },
   "greece2": {
     "name": "Pericles",
@@ -323,7 +334,8 @@
         "image": "https://vignette.wikia.nocookie.net/civilization/images/e/e3/Acropolis_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20161022014318"
       }
     },
-    "dlc-modifiers": {}
+    "dlc-modifiers": {},
+    "dlc-status": "Vanilla"
   },
   "india1": {
     "name": "Gandhi",
@@ -352,7 +364,8 @@
     },
     "dlc-modifiers": {
       "GS Civ Ability": "Indian cities receive the Follower Beliefs of all religions with at least one follower in them, not just the majority religion, and gain +1 Amenity for each religion with at least one follower in them. +2 Spread Religion charges for Missionaries. +100% Religious pressure from Indian Trade Routes."
-    }
+    },
+    "dlc-status": "Vanilla"
   },
   "japan1": {
     "name": "Hojo Tokimune",
@@ -381,7 +394,8 @@
     },
     "dlc-modifiers": {
       "GS Leader Bonus": "+5 Combat Strength for land units in Coastal tiles and naval units in Coast tiles. +100% Production towards Encampment, Holy Site and Theater Square districts. Districts, improvements and units are immune to damage from Hurricanes. +100% damage from Hurricanes in Japanese territory to civilizations at war with Japan."
-    }
+    },
+    "dlc-status": "Vanilla"
   },
   "kongo1": {
     "name": "Mvemba a Nzinga",
@@ -408,7 +422,8 @@
         "image": "https://vignette.wikia.nocookie.net/civilization/images/c/c3/Mbanza_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20180220014520"
       }
     },
-    "dlc-modifiers": {}
+    "dlc-modifiers": {},
+    "dlc-status": "Vanilla"
   },
   "norway1": {
     "name": "Harald Hardrada",
@@ -426,7 +441,8 @@
       "AI Religion": {
         "description": "Protestantism",
         "image": "https://vignette.wikia.nocookie.net/civilization/images/d/db/Protestantism_Icon_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200322155028"
-      }
+      },
+      "dlc-status": "Vanilla"
     },
     "civ-description": {
       "Civ Ability - Knarr": "Can enter Ocean tiles with Shipbuilding, instead of Cartography. All units pay no movement cost to embark or disembark. Naval melee units can heal in neutral territory.",
@@ -441,7 +457,8 @@
     },
     "dlc-modifiers": {
       "GS Leader Bonus": "+50% Production toward naval melee units. Naval melee units gain the ability to perform coastal raids. Pillaging and coastal raiding grant Science, in addition to Gold, for Mines, and Culture, in addition to Faith, for Quarries, Pastures, Plantations, and Camps. Gain the Viking Longship unique unit with Sailing."
-    }
+    },
+    "dlc-status": "Vanilla"
   },
   "rome1": {
     "name": "Trajan",
@@ -464,7 +481,8 @@
         "image": "https://vignette.wikia.nocookie.net/civilization/images/e/ed/Bath_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20170701180313"
       }
     },
-    "dlc-modifiers": {}
+    "dlc-modifiers": {},
+    "dlc-status": "Vanilla"
   },
   "russia1": {
     "name": "Peter",
@@ -493,7 +511,8 @@
     },
     "dlc-modifiers": {
       "GS Civ Ability": "Founded cities start with eight additional tiles. Tundra tiles provide +1 Faith and +1 Production, in addition to their usual yields. Districts, improvements and units are immune to damage from Blizzards. +100% damage from Blizzards inside Russian territory to civilizations at war with Russia."
-    }
+    },
+    "dlc-status": "Vanilla"
   },
   "scythia1": {
     "name": "Tomyris",
@@ -521,7 +540,8 @@
         "description": "Saka Horse Archer (Ranged Cavalry - Classical Era)",
         "image": "https://vignette.wikia.nocookie.net/civilization/images/b/b4/Saka_Horse_Archer_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20161127210622"
       }
-    }
+    },
+    "dlc-status": "Vanilla"
   },
   "spain1": {
     "name": "Philip II",
@@ -551,7 +571,8 @@
     "dlc-modifiers": {
       "R&F Civ Ability": "May form Fleets and Armadas with Mercantilism, instead of Nationalism and Mobilization. Trade Routes between cities on different continents gain +1 Food and +1 Production for domestic Trade Routes, and +6 Gold for international Trade Routes. +2 Loyalty per turn for cities outside of Spain's home continent if they have a Mission adjacent to the City Center.",
       "GS Leader Bonus": "+4 Combat Strength for all units when fighting civilizations following a different Religion. Inquisitors have one extra use of their Remove Heresy ability. Inquisitors eliminate 100% of the presence of other Religions."
-    }
+    },
+    "dlc-status": "Vanilla"
   },
   "sumeria1": {
     "name": "Gilgamesh",
@@ -576,7 +597,8 @@
     },
     "dlc-modifiers": {
       "R&F Leader Bonus": "May declare war on any civilization at war with an ally without warmonger penalties. When at war with a common enemy, Sumerian and allied units share pillage rewards and combat experience if within 5 tiles of each other. Earn Alliance Points per-turn if both civilizations are at war with the same foe."
-    }
+    },
+    "dlc-status": "Vanilla"
   },
   "poland1": {
     "name": "Jadwiga",
@@ -603,7 +625,8 @@
         "image": "https://vignette.wikia.nocookie.net/civilization/images/6/62/Sukiennice_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20171027195218"
       }
     },
-    "dlc-modifiers": {}
+    "dlc-modifiers": {},
+    "dlc-status": "Scenario Pack Poland"
   },
   "australia1": {
     "name": "John Curtin",
@@ -627,7 +650,8 @@
     },
     "dlc-modifiers": {
       "GS Leader Bonus": "+100% Production in all cities for the next 10 turns after being declared war upon or liberating a city."
-    }
+    },
+    "dlc-status": "Scenario Pack Australia"
   },
   "persia1": {
     "name": "Cyrus",
@@ -657,7 +681,8 @@
     "dlc-modifiers": {
       "R&F Leader Bonus": "+2 Movement for all units for the next 10 turns after declaring a Surprise War. Surprise Wars count as Formal Wars for the purposes of warmongering penalties and war weariness. Occupied cities have no penalties to their yields. +5 Loyalty per turn in occupied cities with a garrisoned unit.",
       "GS Leader Bonus": "+2 Movement for all units for the next 10 turns after declaring a Surprise War. Declaring a Surprise War only counts as a Formal War for the purpose of Grievances and war weariness. Occupied cities have no penalties to their yields. +5 Loyalty per turn in occupied cities with a garrisoned unit."
-    }
+    },
+    "dlc-status": "Scenario Pack Persia and Macedon"
   },
   "macedon1": {
     "name": "Alexander",
@@ -686,7 +711,8 @@
     },
     "dlc-modifiers": {
       "GS AI Agenda": "Grievances against this leader decay at twice the usual rate."
-    }
+    },
+    "dlc-status": "Scenario Pack Persia and Macedon"
   },
   "nubia1": {
     "name": "Amanitore",
@@ -709,7 +735,8 @@
         "image": "https://vignette.wikia.nocookie.net/civilization/images/7/73/Nubian_Pyramid_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20171027200639"
       }
     },
-    "dlc-modifiers": {}
+    "dlc-modifiers": {},
+    "dlc-status": "Scenario Pack Nubia"
   },
   "khmer1": {
     "name": "Jayavarman VII",
@@ -736,7 +763,8 @@
         "image": "https://vignette.wikia.nocookie.net/civilization/images/2/2f/Prasat_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200702090725"
       }
     },
-    "dlc-modifiers": {}
+    "dlc-modifiers": {},
+    "dlc-status": "Scenario Pack Khmer and Indonesia"
   },
   "indonesia1": {
     "name": "Gitarja",
@@ -763,7 +791,8 @@
         "image": "https://vignette.wikia.nocookie.net/civilization/images/8/86/Kampung_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20190815052831"
       }
     },
-    "dlc-modifiers": {}
+    "dlc-modifiers": {},
+    "dlc-status": "Scenario Pack Khmer and Indonesia"
   },
   "cree1": {
     "name": "Poundmaker",
@@ -786,7 +815,8 @@
         "image": "https://vignette.wikia.nocookie.net/civilization/images/0/08/Mekewap_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20180501223905"
       }
     },
-    "dlc-modifiers": {}
+    "dlc-modifiers": {},
+    "dlc-status": "Rise and Fall Expansion"
   },
   "dutch1": {
     "name": "Wilhelmina",
@@ -815,7 +845,8 @@
     },
     "dlc-modifiers": {
       "GS Civ Ability": "Rivers provide a +2 adjacency bonus for Campus, Theater Square, and Industrial Zone districts. Building a Harbor triggers a Culture Bomb, claiming surrounding tiles. +50% Production towards the Dam district and Flood Barrier building."
-    }
+    },
+    "dlc-status": "Rise and Fall Expansion"
   },
   "georgia1": {
     "name": "Tamar",
@@ -842,7 +873,8 @@
         "image": "https://vignette.wikia.nocookie.net/civilization/images/5/5e/Tsikhe_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20180411171131"
       }
     },
-    "dlc-modifiers": {}
+    "dlc-modifiers": {},
+    "dlc-status": "Rise and Fall Expansion"
   },
   "india2": {
     "name": "Chandragupta",
@@ -871,7 +903,8 @@
     },
     "dlc-modifiers": {
       "GS Civ Ability": "Indian cities receive the Follower Beliefs of all religions with at least one follower in them, not just the majority religion, and gain +1 Amenity for each religion with at least one follower in them. +2 Spread Religion charges for Missionaries. +100% Religious pressure from Indian Trade Routes."
-    }
+    },
+    "dlc-status": "Rise and Fall Expansion"
   },
   "korea1": {
     "name": "Seondeok",
@@ -898,7 +931,8 @@
         "image": "https://vignette.wikia.nocookie.net/civilization/images/1/19/Seowon_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20190309225958"
       }
     },
-    "dlc-modifiers": {}
+    "dlc-modifiers": {},
+    "dlc-status": "Rise and Fall Expansion"
   },
   "mapuche1": {
     "name": "Lautaro",
@@ -921,7 +955,8 @@
         "image": "https://vignette.wikia.nocookie.net/civilization/images/d/de/Chemamull_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20180501224243"
       }
     },
-    "dlc-modifiers": {}
+    "dlc-modifiers": {},
+    "dlc-status": "Rise and Fall Expansion"
   },
   "mongolia1": {
     "name": "Genghis Khan",
@@ -944,7 +979,8 @@
         "image": "https://vignette.wikia.nocookie.net/civilization/images/2/2c/Ordu_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20180411170533"
       }
     },
-    "dlc-modifiers": {}
+    "dlc-modifiers": {},
+    "dlc-status": "Rise and Fall Expansion"
   },
   "scotland1": {
     "name": "Robert the Bruce",
@@ -971,7 +1007,8 @@
         "image": "https://vignette.wikia.nocookie.net/civilization/images/e/ed/Golf_Course_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20180501224042"
       }
     },
-    "dlc-modifiers": {}
+    "dlc-modifiers": {},
+    "dlc-status": "Rise and Fall Expansion"
   },
   "zulu1": {
     "name": "Shaka",
@@ -994,7 +1031,8 @@
         "image": "https://vignette.wikia.nocookie.net/civilization/images/8/8e/Ikanda_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20180219222636"
       }
     },
-    "dlc-modifiers": {}
+    "dlc-modifiers": {},
+    "dlc-status": "Rise and Fall Expansion"
   },
   "hungary1": {
     "name": "Matthias Corvinus",
@@ -1025,7 +1063,8 @@
         "image": "https://vignette.wikia.nocookie.net/civilization/images/b/bd/Thermal_Bath_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20190215171940"
       }
     },
-    "dlc-modifiers": {}
+    "dlc-modifiers": {},
+    "dlc-status": "Gathering Storm Expansion"
   },
   "maori": {
     "name": "Kupe",
@@ -1048,7 +1087,8 @@
         "image": "https://vignette.wikia.nocookie.net/civilization/images/a/a9/Marae_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20190215172017"
       }
     },
-    "dlc-modifiers": {}
+    "dlc-modifiers": {},
+    "dlc-status": "Gathering Storm Expansion"
   },
   "canada1": {
     "name": "Wilfrid Laurier",
@@ -1075,7 +1115,8 @@
         "image": "https://vignette.wikia.nocookie.net/civilization/images/1/13/Ice_Hockey_Rink_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20190214193654"
       }
     },
-    "dlc-modifiers": {}
+    "dlc-modifiers": {},
+    "dlc-status": "Gathering Storm Expansion"
   },
   "inca1": {
     "name": "Pachacuti",
@@ -1098,7 +1139,8 @@
         "image": "https://vignette.wikia.nocookie.net/civilization/images/b/b0/Terrace_Farm_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20190214191659"
       }
     },
-    "dlc-modifiers": {}
+    "dlc-modifiers": {},
+    "dlc-status": "Gathering Storm Expansion"
   },
   "mali1": {
     "name": "Mansa Musa",
@@ -1125,7 +1167,8 @@
         "image": "https://vignette.wikia.nocookie.net/civilization/images/f/f1/Suguba_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20190109015215"
       }
     },
-    "dlc-modifiers": {}
+    "dlc-modifiers": {},
+    "dlc-status": "Gathering Storm Expansion"
   },
   "sweden1": {
     "name": "Kristina",
@@ -1152,7 +1195,8 @@
         "image": "https://vignette.wikia.nocookie.net/civilization/images/6/63/Open-Air_Museum_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20190821202035"
       }
     },
-    "dlc-modifiers": {}
+    "dlc-modifiers": {},
+    "dlc-status": "Gathering Storm Expansion"
   },
   "ottoman1": {
     "name": "Suleiman",
@@ -1183,7 +1227,8 @@
         "image": "https://vignette.wikia.nocookie.net/civilization/images/6/6e/Grand_Bazaar_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20190215172113"
       }
     },
-    "dlc-modifiers": {}
+    "dlc-modifiers": {},
+    "dlc-status": "Gathering Storm Expansion"
   },
   "phoenicia1": {
     "name": "Dido",
@@ -1210,7 +1255,8 @@
         "image": "https://vignette.wikia.nocookie.net/civilization/images/7/72/Cothon_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20190130170717"
       }
     },
-    "dlc-modifiers": {}
+    "dlc-modifiers": {},
+    "dlc-status": "Gathering Storm Expansion"
   },
   "england2": {
     "name": "Eleanor of Aquitaine",
@@ -1237,7 +1283,8 @@
         "image": "https://vignette.wikia.nocookie.net/civilization/images/5/5a/Royal_Navy_Dockyard_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20180220014247"
       }
     },
-    "dlc-modifiers": {}
+    "dlc-modifiers": {},
+    "dlc-status": "Gathering Storm Expansion"
   },
   "france2": {
     "name": "Eleanor of Aquitaine",
@@ -1264,7 +1311,8 @@
         "image": "https://vignette.wikia.nocookie.net/civilization/images/1/1f/Ch%C3%A2teau_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20161109234422"
       }
     },
-    "dlc-modifiers": {}
+    "dlc-modifiers": {},
+    "dlc-status": "Gathering Storm Expansion"
   },
   "colombia1": {
     "name": "Simón Bolívar",
@@ -1291,7 +1339,8 @@
         "image": "https://vignette.wikia.nocookie.net/civilization/images/e/ea/Hacienda_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200522050000"
       }
     },
-    "dlc-modifiers": {}
+    "dlc-modifiers": {},
+    "dlc-status": "Frontier Pass"
   },
   "maya1": {
     "name": "Lady Six Sky",
@@ -1314,7 +1363,8 @@
         "image": "https://vignette.wikia.nocookie.net/civilization/images/8/86/Observatory_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200514171315"
       }
     },
-    "dlc-modifiers": {}
+    "dlc-modifiers": {},
+    "dlc-status": "Frontier Pass"
   },
   "ethiopia1": {
     "name": "Menelik II",
@@ -1341,6 +1391,7 @@
         "image": "https://vignette.wikia.nocookie.net/civilization/images/a/a7/Rock-Hewn_Church_%28Civ6%29.png/revision/latest/scale-to-width-down/44?cb=20200723190751"
       }
     },
-    "dlc-modifiers": {}
+    "dlc-modifiers": {},
+    "dlc-status": "Frontier Pass"
   }
 }

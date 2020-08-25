@@ -1,0 +1,46 @@
+.filter-grid-button-container {
+  margin: 10px;
+}
+
+.filter-grid-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  width: 60px;
+  height: 60px;
+  padding: 0px 5px;
+
+  outline: none;
+  border: none;
+  background-color: transparent;
+}
+
+.filter-grid-button:hover {
+  cursor: pointer;
+}
+
+.filter-grid-button-icon {
+  width: auto;
+  height: 100%;
+  color: white;
+}
+
+.filter-modal * {
+  color: whitesmoke;
+}
+
+.tags {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  list-style: none;
+
+  padding: 0px 10px;
+}
+
+@media only screen and (max-width: 950px) {
+  .tag-li {
+    margin: 10px 0px;
+  }
+}

@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
-import { GenerateHexGridList } from "../util/HexGridList";
-import { useWindowDimensions } from "../hooks";
+import { GenerateHexGridList } from "../../util/HexGridList";
+import { useWindowDimensions } from "../../hooks";
 
 function HexGrid() {
   const hexGrid = GenerateHexGridList();
@@ -26,7 +26,7 @@ function HexGrid() {
   };
 
   const cells_per_row = getCellsPerRow();
-  const n_rows = Math.ceil(hexGrid.length / cells_per_row) + 1; //minimun number of rows given cells_per_row
+  const n_rows = Math.ceil(hexGrid.length / (cells_per_row - 0.5)); //minimun number of rows given cells_per_row
 
   return (
     <div className="hex-grid">

@@ -2,10 +2,7 @@ import React from "react";
 
 function DraftResultCard(props) {
   return (
-    <div
-      className={props.className}
-      key={`${props.civilization.id}-draft-result-card`}
-    >
+    <div className={props.className}>
       <div className="draft-results-portrait">
         <img
           src={props.civilization.portrait}
