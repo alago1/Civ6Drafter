@@ -38,7 +38,7 @@ function PageModal(props) {
         },
 
         content:
-          windowWidth <= 768 || props.forceLargeView ? largeView : smallView,
+          windowWidth <= 950 || props.forceLargeView ? largeView : smallView,
       }}
       contentLabel={props.contentLabel}
     >

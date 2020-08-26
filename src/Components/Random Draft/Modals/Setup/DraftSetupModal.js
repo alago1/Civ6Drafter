@@ -13,29 +13,33 @@ function DraftSetupModal(props) {
   return useObserver(() => (
     <div className={props.className}>
       <h1 className="modal-title-text">Random Draft Setup</h1>
-      {store.playerCivs.length !== 0 && (
-        <SelectedCivsText
-          playerCivs={store.playerCivs}
-          defaultValue={startSelectedPlayers}
-          onTagChange={store.updateSelectedPlayers}
-        />
-      )}
-      {store.remainingCivs.length !== 0 && (
-        <DraftedCivsText
-          remainingCivs={store.remainingCivs}
-          defaultValue={startDraftedPlayers}
-          onTagChange={store.updateDraftedPlayers}
-        />
-      )}
-      <button
-        onClick={store.runDraft}
-        className="modal-button run-draft-button"
-        disabled={
-          store.playerCivs.length === 0 && store.remainingCivs.length === 0
-        }
-      >
-        Run Draft
-      </button>
+      <div className="modal-draft-content">
+        {store.playerCivs.length !== 0 && (
+          <SelectedCivsText
+            playerCivs={store.playerCivs}
+            defaultValue={startSelectedPlayers}
+            onTagChange={store.updateSelectedPlayers}
+          />
+        )}
+        {store.remainingCivs.length !== 0 && (
+          <DraftedCivsText
+            remainingCivs={store.remainingCivs}
+            defaultValue={startDraftedPlayers}
+            onTagChange={store.updateDraftedPlayers}
+          />
+        )}
+      </div>
+      <div className="run-draft-button-container">
+        <button
+          onClick={store.runDraft}
+          className="modal-button run-draft-button"
+          disabled={
+            store.playerCivs.length === 0 && store.remainingCivs.length === 0
+          }
+        >
+          Run Draft
+        </button>
+      </div>
     </div>
   ));
 }

@@ -40,48 +40,51 @@ function CharacterPanel() {
                 alt=""
                 className="modal-selected-flag"
               />
+
+              <a
+                href={store.selectedCiv.wiki}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="modal-wiki-link"
+              >
+                <img
+                  src="https://img.icons8.com/metro/26/000000/external-link.png"
+                  alt=""
+                  className="modal-link-img"
+                />
+                Wiki Page
+              </a>
             </div>
-            <a
-              href={store.selectedCiv.wiki}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="modal-wiki-link"
-            >
-              <img
-                src="https://img.icons8.com/metro/26/000000/external-link.png"
-                alt=""
-                className="modal-link-img"
-              />
-              Wiki Page
-            </a>
-            <button
-              className="modal-button ban-button"
-              onClick={() => {
-                if (store.selectedCiv.status === "banned") {
-                  store.civs[store.selectedCivId].status = null;
-                } else {
-                  store.civs[store.selectedCivId].status = "banned";
-                  closeModal();
-                }
-              }}
-              disabled={!["banned", null].includes(store.selectedCiv.status)}
-            >
-              {store.selectedCiv.status === "banned" ? "Unban" : "Ban"}
-            </button>
-            <button
-              className="modal-button select-button"
-              onClick={() => {
-                if (store.selectedCiv.status === "player") {
-                  store.civs[store.selectedCivId].status = null;
-                } else {
-                  store.civs[store.selectedCivId].status = "player";
-                  closeModal();
-                }
-              }}
-              disabled={!["player", null].includes(store.selectedCiv.status)}
-            >
-              {store.selectedCiv.status === "player" ? "Deselect" : "Select"}
-            </button>
+            <div className="modal-buttons-container">
+              <button
+                className="modal-button ban-button"
+                onClick={() => {
+                  if (store.selectedCiv.status === "banned") {
+                    store.civs[store.selectedCivId].status = null;
+                  } else {
+                    store.civs[store.selectedCivId].status = "banned";
+                    closeModal();
+                  }
+                }}
+                disabled={!["banned", null].includes(store.selectedCiv.status)}
+              >
+                {store.selectedCiv.status === "banned" ? "Unban" : "Ban"}
+              </button>
+              <button
+                className="modal-button select-button"
+                onClick={() => {
+                  if (store.selectedCiv.status === "player") {
+                    store.civs[store.selectedCivId].status = null;
+                  } else {
+                    store.civs[store.selectedCivId].status = "player";
+                    closeModal();
+                  }
+                }}
+                disabled={!["player", null].includes(store.selectedCiv.status)}
+              >
+                {store.selectedCiv.status === "player" ? "Deselect" : "Select"}
+              </button>
+            </div>
           </div>
           <div className="modal-description">
             <h1 className="modal-title">{`${store.selectedCiv.name} of ${store.selectedCiv.nation}`}</h1>

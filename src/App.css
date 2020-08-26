@@ -135,6 +135,11 @@
   align-items: flex-start;
 }
 
+.modal-draft-content {
+  width: 100%;
+  height: auto;
+}
+
 .modal-portrait {
   height: auto;
   display: flex;
@@ -186,9 +191,15 @@
   margin: 5px;
 }
 
+.modal-buttons-container {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
 .modal-button {
   margin: 10px;
-  width: 100%;
+  width: 160px;
   height: 50px;
   border-radius: 30px;
   border: 0px;
@@ -263,10 +274,19 @@
   border-radius: 10px;
 }
 
+.run-draft-button-container {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
 .run-draft-button {
-  float: right;
-  width: 250px;
-  height: 80px;
+  margin: auto;
+  width: 250px !important;
+  height: 80px !important;
   background-color: yellowgreen;
   color: black;
   font-size: 30px;
@@ -370,8 +390,22 @@
     padding: 10px;
   }
   .modal-portrait {
-    float: left;
     margin: 0px 40px 0px 0px;
+  }
+
+  .modal-title,
+  .modal-title-text {
+    font-size: 2rem;
+  }
+
+  .modal-buttons-container {
+    flex-direction: row;
+    width: auto;
+  }
+
+  .modal-button {
+    margin: 10px 20px;
+    width: 180px;
   }
 
   .modal-content {
@@ -382,11 +416,17 @@
   }
 
   .modal-selected-portrait {
-    width: 100px;
+    width: 150px;
   }
 
   .random-draft-result-card {
     margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .modal-buttons-container {
+    flex-direction: column;
   }
 }
 
