@@ -1,4 +1,4 @@
-import civsList from "../civilizations.json";
+import { civsList } from "../civilizations.js";
 
 export const computeCivs = () =>
   Object.fromEntries(

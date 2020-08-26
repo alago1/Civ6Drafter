@@ -154,7 +154,9 @@
 }
 
 .modal-selected-flag {
-  width: 50px;
+  width: 60px;
+  /* height: 50px; */
+  /* width: auto; */
   transform: translateY(-20px);
 }
 
