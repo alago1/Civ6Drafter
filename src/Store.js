@@ -16,7 +16,7 @@ export const StoreProvider = ({ children }) => {
 
     civs: computedCivs,
 
-    applyFilters: (filters) => {
+    applyFilters: async (filters) => {
       const filtered_civs = {};
       for (let param of Object.keys(computedCivs)) {
         if (filters.includes(computedCivs[param]["dlc-status"])) {
